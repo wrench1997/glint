@@ -1,0 +1,534 @@
+{
+    "": [
+        {
+            "url": "https://www.bilibili.com/",
+            "method": "GET",
+            "headers": {},
+            "data": "",
+            "source": "Target",
+            "hostid": 0
+        }
+    ],
+    "CollectLink": [
+        {
+            "url": "https://www.bilibili.com/vue-router/dist/vue-router.esm",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/application/json",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/application/x-www-form-urlencoded",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "http://www.bilibili.com/",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/image/webp",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/anime/",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/movie/",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/guochuang/",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/tv/",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/variety/",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/documentary/",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/music",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/audio/home?musicType=music",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/rap",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/cinephile",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/food",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/life",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/car",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/fashion",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/sports",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/animal",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/virtual",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/mooc",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/read/home",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/blackboard/activity-list.html?",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/cheese/",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/cheese/category?first=95\u0026csource=Channel_class",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/blackboard/activity-5zJxM3spoS.html",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/log/web",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/channel",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/read/cv17948024",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/blackboard/activity-mQMjtxGyTX.html",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/video/BV1W14y1b7Mq",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/douga",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/dance",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/game",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/knowledge",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/cheese",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/tech",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/kichiku",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/information",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/ent",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/read/ranking#type=3",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/v/customer-service",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/blackboard/aboutUs.html",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/blackboard/contact.html",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/protocal/licence.html",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/blackboard/join.html",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/blackboard/friends-links.html",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/blackboard/privacy-pc.html",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/blackboard/topic_list.html",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "https://www.bilibili.com/blackboard/help.html",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.bilibili.com/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        }
+    ]
+}

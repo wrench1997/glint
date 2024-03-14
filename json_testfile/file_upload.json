@@ -1,0 +1,22 @@
+{
+    "Normal": [
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/upload/",
+            "method": "POST",
+            "headers": {
+                "Content-Type": "multipart/form-data;boundary=----WebKitFormBoundaryi9FZy8tOBbm1MGvX",
+                "Referer": "http://192.168.166.8:7009/vulnerabilities/upload",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Origin": "http://192.168.166.8:7009",
+                "Accept-Encoding": "gzip,deflate",
+                "Host": "192.168.166.8",
+                "Cookie": "_ga=GA1.1.1874411628.1658122208; PHPSESSID=7en983qg5cg3qg0k22p64c1e06; security=low",
+                "Connection": "close",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "LS0tLS0tV2ViS2l0Rm9ybUJvdW5kYXJ5aTlGWnk4dE9CYm0xTUd2WApDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9Ik1BWF9GSUxFX1NJWkUiCgoxMDAwMDAKLS0tLS0tV2ViS2l0Rm9ybUJvdW5kYXJ5aTlGWnk4dE9CYm0xTUd2WApDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9InVwbG9hZGVkIjsgZmlsZW5hbWU9ImNocm9tZS5WaXN1YWxFbGVtZW50c01hbmlmZXN0LnhtbCIKQ29udGVudC1UeXBlOiB0ZXh0L3htbAoKPEFwcGxpY2F0aW9uIHhtbG5zOnhzaT0naHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UnPgogIDxWaXN1YWxFbGVtZW50cwogICAgICBTaG93TmFtZU9uU3F1YXJlMTUweDE1MExvZ289J29uJwogICAgICBTcXVhcmUxNTB4MTUwTG9nbz0nMTA1LjAuNTE5NS4xMDJcVmlzdWFsRWxlbWVudHNcTG9nby5wbmcnCiAgICAgIFNxdWFyZTcweDcwTG9nbz0nMTA1LjAuNTE5NS4xMDJcVmlzdWFsRWxlbWVudHNcU21hbGxMb2dvLnBuZycKICAgICAgU3F1YXJlNDR4NDRMb2dvPScxMDUuMC41MTk1LjEwMlxWaXN1YWxFbGVtZW50c1xTbWFsbExvZ28ucG5nJwogICAgICBGb3JlZ3JvdW5kVGV4dD0nbGlnaHQnCiAgICAgIEJhY2tncm91bmRDb2xvcj0nIzVGNjM2OCcvPgo8L0FwcGxpY2F0aW9uPgoKLS0tLS0tV2ViS2l0Rm9ybUJvdW5kYXJ5aTlGWnk4dE9CYm0xTUd2WApDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9IlVwbG9hZCIKClVwbG9hZAotLS0tLS1XZWJLaXRGb3JtQm91bmRhcnlpOUZaeTh0T0JibTFNR3ZYLS0K",
+            "source": "DOM",
+            "hostid": 0
+        }
+    ]
+}

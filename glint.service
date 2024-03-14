@@ -1,0 +1,20 @@
+[Unit]
+Description=Control the glint service
+After=mysql.service
+
+[Service]
+WorkingDirectory=/usr/local/863/bin
+Type=simple
+User=root
+Group=root
+ExecStart=/usr/local/863/bin/glint --socket 127.0.0.1:3009 --cert /usr/local/863/certific/server.pem --key /usr/local/863/certific/server.key --dbconnect
+PIDFile=/var/run/glint.pid
+ExecStop=/bin/kill -s SIGKILL $MAINPID
+SuccessExitStatus=SIGKILL
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=0
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target

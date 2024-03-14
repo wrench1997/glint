@@ -1,0 +1,20 @@
+{
+    "SubmitDoM-Kfzb7": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xxe/xxe_1.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=aonvbs7l3scahs6mah7vibrcfp; security=low",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/vul/xxe",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "xml=1111&submit=%E6%8F%90%E4%BA%A4",
+            "source": "Document",
+            "hostid": 0
+        }
+    ]
+}

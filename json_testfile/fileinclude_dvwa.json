@@ -1,0 +1,14 @@
+{
+    "": [
+        {
+            "url": "http://192.168.166.2/dvwa/vulnerabilities/fi/?page=file1.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.2/dvwa/"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        }
+    ]
+}

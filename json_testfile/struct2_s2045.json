@@ -1,0 +1,20 @@
+{
+    "SubmitDoM-kvvSS": [
+        {
+            "url": "http://192.168.166.94:8080/doUpload.action;jsessionid=1wkbkl77ss96b1f8bej25j5ntg",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Content-Type": "multipart/form-data; boundary=----WebKitFormBoundary4dLAgUF2jUFW2xE5",
+                "Cookie": "JSESSIONID=1wkbkl77ss96b1f8bej25j5ntg",
+                "Origin": "http://192.168.166.94:8080",
+                "Referer": "http://192.168.166.94:8080/doUpload.action",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "LS0tLS0tV2ViS2l0Rm9ybUJvdW5kYXJ5NGRMQWdVRjJqVUZXMnhFNVxyXG5Db250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9XCJ1cGxvYWRcIjsgZmlsZW5hbWU9XCJcIlxyXG5Db250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL29jdGV0LXN0cmVhbVxyXG5cclxuXHJcbi0tLS0tLVdlYktpdEZvcm1Cb3VuZGFyeTRkTEFnVUYyalVGVzJ4RTVcclxuQ29udGVudC1EaXNwb3NpdGlvbjogZm9ybS1kYXRhOyBuYW1lPVwiY2FwdGlvblwiXHJcblxyXG5cclxuLS0tLS0tV2ViS2l0Rm9ybUJvdW5kYXJ5NGRMQWdVRjJqVUZXMnhFNS0tXHJcbgo=",
+            "source": "Document",
+            "hostid": 0
+        }
+    ]
+}

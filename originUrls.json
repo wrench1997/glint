@@ -1,0 +1,37 @@
+{
+    "SubmitDoM-Obt25": [
+        {
+            "data": "",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Cookie": "PHPSESSID=0f7u7ip50bmdafuigpblmojnk3",
+                "Referer": null,
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "Origin": "http://192.168.166.2",
+            "hostid": 7,
+            "method": "GET",
+            "source": "Document",
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_blind_b.php?name=test1234\u0026submit=%E6%9F%A5%E8%AF%A2"
+        }
+    ],
+    "SubmitDoM-NNoEk": [
+        {
+            "data": "o=test1234",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=0f7u7ip50bmdafuigpblmojnk3",
+                "Origin": "http://192.168.166.2",
+                "Referer": null,
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "hostid": 7,
+            "method": "POST",
+            "source": "Document",
+            "url": "http://192.168.166.2/pikachu/vul/unserilization/unser.php"
+        }
+    ]
+}

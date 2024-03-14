@@ -1,0 +1,14 @@
+{
+    "Normal": [
+        {
+            "url": "https://www.maigoo.com/brand/search/",
+            "method": "GET",
+            "headers": {
+                "Referer": "https://www.maigoo.com"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        }
+    ]
+}

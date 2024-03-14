@@ -1,0 +1,19 @@
+{
+    "": [
+        {
+            "url": "https://www.iqiyi.com/manhua/",
+            "method": "GET",
+            "headers": {
+                "Origin": "https://www.example.com",
+                "Cookie": "QC005=fae48c59d3121d68f8e46823b6139fa9; QC173=1; QC175=%7B%22upd%22%3Atrue%2C%22ct%22%3A%22%22%7D; QC008=1670377436.1670377436.1670377436.1; QC007=DIRECT; QC189=5257_B%2C5397_B%2C5465_B%2C5029_B%2C4580_B%2C5468_B%2C4824_A%2C4863_B%2C4862_B; QC186=true; QC187=true; QC006=zeuz7v31u1xww3z7kdfl4cxu; QC191=%7B%22mergedAbtest%22%3A%224580_A%22%2C%22PCW_1_qyhome_recommend_sources%22%3A%7B%22value%22%3A%220%22%2C%22abtest%22%3A%224580_A%22%7D%7D; TQC030=1; QP0037=0; T00404=598ee395450674410982c22aa9bdd830;IMS=IggQABj_8MKcBiouCiAzYTk1ODg0YWE0YzZlODhhYjU2OWM5MTVhZDA3ODljZRAAIggI0AUQAhiwCXIkCiAzYTk1ODg0YWE0YzZlODhhYjU2OWM5MTVhZDA3ODljZRAAggEAigEkCiIKIDNhOTU4ODRhYTRjNmU4OGFiNTY5YzkxNWFkMDc4OWNl; __uuid=56a2cee4-9528-5f4a-6022-84f7d91abb71; QC010=10002737; nu=0; P00004=.1670377441.48c8d3791c; QC180=true; agreementUpdate=V3; __dfp=a03c368733060a4899851cd6f19ad475a8e7e4f60bd414acd778e601b002079ea2@1671673437631@1670377438631; QC192=",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4512.0 Safari/537.36",
+                "Host": " www.bilibili.com",
+                "Accept-Encoding": "gzip,deflate,br",
+                "Connection": " Keep-alive"
+            },
+            "data": "",
+            "source": "Target",
+            "hostid": 0
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "": [
+        {
+            "url": "http://www.btiii.com/sale_work/system/manager/inc/cai_ping.jsp",
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "X-Requested-With": "XMLHttpRequest",
+                "Referer": "http://www.btiii.com/",
+                "Cookie": "JSESSIONID=C48CC105896B862E09342F53DFD44BDB; __qc_wId=326; pgv_pvid=6340910611",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Encoding": "gzip,deflate,br",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4512.0 Safari/537.36",
+                "Host": "www.btiii.com",
+                "Connection": "Keep-alive"
+            },
+            "data": "id=212",
+            "source": "DOM"
+        }
+    ]
+}

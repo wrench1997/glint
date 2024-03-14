@@ -1,0 +1,769 @@
+{
+    "": [
+        {
+            "url": "http://192.168.166.8:7009",
+            "method": "GET",
+            "headers": {},
+            "data": "",
+            "source": "Target",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/view_help.php?id=fi\u0026security=high",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/view_source.php?id=fi\u0026security=high",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/view_help.php?id=exec\u0026security=high",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/view_source.php?id=exec\u0026security=high",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/view_help.php?id=csrf\u0026security=high",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/view_source.php?id=csrf\u0026security=high",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/view_help.php?id=brute\u0026security=high",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/view_source.php?id=brute\u0026security=high",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/view_help.php?id=sqli\u0026security=high",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/sqli/session-input.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/view_source.php?id=sqli\u0026security=high",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "",
+            "hostid": 0
+        }
+    ],
+    "CollectLink": [
+        {
+            "url": "http://192.168.166.8:7009/instructions.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/setup.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/brute/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/exec/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/csrf/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/fi/?page=include.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/upload/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/captcha/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/sqli/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/sqli_blind/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/weak_id/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/xss_d/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/xss_r/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/xss_s/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/csp/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/javascript/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/security.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/phpinfo.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/about.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/logout.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/fi/?page=file1.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/fi/?page=file2.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/fi/?page=file3.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/instructions.php?doc=readme",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/instructions.php?doc=PDF",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/instructions.php?doc=changelog",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/instructions.php?doc=copying",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/instructions.php?doc=PHPIDS-license",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/security.php?phpids=on",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/security.php?test=%22\u003e\u003cscript\u003eeval(window.name)\u003c/script\u003e",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/ids_log.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/csp/source/jsonp.php?callback=solveSum",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/phpinfo.php?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/hackable/flags/fi.php",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.168.166.8:7009"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/security.php?phpids=off",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Origin": "http://192.168.166.8:7009",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        }
+    ],
+    "Normal": [
+        {
+            "url": "http://192.168.166.8:7009/",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Referer": null,
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/xss_s/",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Origin": "http://192.168.166.8:7009",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "txtName=test1234\u0026mtxMessage=test1234\u0026btnSign=Sign+Guestbook",
+            "source": "Document",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/csrf/index.php",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/view_source_all.php?id=fi",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/brute/index.php",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-1JUo0": [
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/weak_id/",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Origin": "http://192.168.166.8:7009",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-676Iu": [
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/csrf/index.php?password_new=test1234\u0026password_conf=test1234\u0026Change=Change\u0026user_token=417683a45029f3165124a682be41abc7",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-GJnbq": [
+        {
+            "url": "http://192.168.166.8:7009/ids_log.php?clear_log=Clear+Log",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-JoS6u": [
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/javascript/",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Origin": "http://192.168.166.8:7009",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "token=28638d855bc00d62b33f9643eab3e43d8335ab2b308039abd8fb8bef86331b14\u0026phrase=test1234\u0026send=Submit",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-SIHd6": [
+        {
+            "url": "http://192.168.166.8:7009/security.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Origin": "http://192.168.166.8:7009",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "security=high\u0026seclev_submit=Submit\u0026user_token=57af1adb9ab619a1cf84a980aeab24fc",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-dte9b": [
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/exec/",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Origin": "http://192.168.166.8:7009",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "ip=test1234\u0026Submit=Submit",
+            "source": "Document",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/csrf/?password_new=test1234\u0026password_conf=test1234\u0026Change=Change\u0026user_token=38d7a6ea49ec5429f3d59a6d4d0c3100",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/brute/?username=Wrench1997\u0026password=Liujialin1997\u0026Login=Login\u0026user_token=b63503dab2a9e2f8d236e9a2190c38a2",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-o5Ce3": [
+        {
+            "url": "http://192.168.166.8:7009/setup.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Origin": "http://192.168.166.8:7009",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "create_db=Create+%2F+Reset+Database\u0026user_token=e966820b8775659e2d1d779c41a465c4",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-oDqay": [
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/brute/index.php?username=Wrench1997\u0026password=Liujialin1997\u0026Login=Login\u0026user_token=12bc9222754cbb219091c1d88db35c45",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-q0Vp5": [
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/sqli/session-input.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Origin": "http://192.168.166.8:7009",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "id=test1234\u0026Submit=Submit",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-w9aIN": [
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/xss_r/?name=test1234",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-zT4iv": [
+        {
+            "url": "http://192.168.166.8:7009/vulnerabilities/xss_d/?default=English",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "Cookie": "PHPSESSID=7s0fsnj0epn44o8378o1m71fr7; security=high",
+                "Referer": "http://192.168.166.8:7009",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ]
+}

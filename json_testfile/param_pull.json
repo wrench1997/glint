@@ -1,0 +1,19 @@
+{
+    "SubmitDoM-gvwbK": [
+        {
+            "url": "/ajaxstream/company/?action=gettrade&id=8634%26n974065=v934137&page=2",
+            "method": "POST",
+            "headers": {
+                "Cookie": "__yjs_duid=1_bfdeb550ff0e097f217490ebff5037161673489268925; u=55dffb315911da1cb370560e2e0cb0b6; p3_8634=1; __bid_n=185a3bbca14b682ea64207; FPTOKEN=PRMKsAY5Foew4tR3XETacwUjJRnmgkM2SDFBRPWysBbTa4N23cOcE2h3vzIDrDHRAK5C6ROiFb6MJ8ZAAFKMxu6UFWCDM67Pu4D368wo7Fp1wYEv6GbAp/zVmQE3ueDWJItScvuaZlo4XzzcbWyzUHvZYsSJm/63beW8q2ovozJ//6+2phLVEmcNZI12YNlvzAYt39/GwlcqZt0wBPlhYDNaFEQEHYPSgQnc2+u+yEDeWxggi3ISrmhrylnWCgBuLUxIcUNZc4PhM0vvQF0mpWaXUvtAjjw5vuKyXL70OQMr79y9rU1Ybr1To6FYXrzfaaiZVc4vxIJiXUb9Q/6Fia6LtMoiPboBckYhDXIiWZrl71blD/Kk8rOD+VgQwRMcYCn5Vh+YRneEo6xwrqwYfw==|gQsEb1VDIHju1qxSy66RbFYpAU2ImCO/g18dK+fTJjQ=|10|cc9faf2f7ce74cce148c88a56f26896b; PHPSESSID=071aca3633fa72b72bd6b542c3f7ee57; mgtoken=mg_242985455; history=cid%3A2476%2Cbid%3A8634; p5_8634=1",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,/;q=0.8",
+                "Accept-Encoding": "gzip,deflate,br",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36",
+                "Host": "www.maigoo.com",
+                "Connection": "Keep-alive"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ]
+}

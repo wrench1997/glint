@@ -1,0 +1,22 @@
+syntax = "proto3";
+package mesonrpc;
+option go_package = ".";
+
+
+import "google/protobuf/struct.proto";
+
+service RouteGuide  {
+    rpc RouteChat (stream JsonRequest) returns (stream JsonResponse) {}
+}
+ 
+message JsonRequest {
+    int64 taskid  = 1;
+    int64 targetid = 2;
+    google.protobuf.Struct Details = 3;
+}
+
+message JsonResponse {
+    int64 taskid  = 1;
+    int64 targetid = 2;
+    google.protobuf.Struct Report = 3;
+}

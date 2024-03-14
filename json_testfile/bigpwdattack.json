@@ -1,0 +1,20 @@
+{
+    "Normal": [
+        {
+            "url": "http://www.uni-president.com.cn/admin/login.asp",
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Referer": "http://www.uni-president.com.cn/index.asp",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Encoding": "gzip,deflate,br",
+                "Host": "www.uni-president.com.cn",
+                "Connection": "Keep-alive",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "mf=login&send_btn=%BDT%A9w%B5n%A4J&user_id=admin&user_pass=aaa",
+            "source": "DOM",
+            "hostid": 0
+        }
+    ]
+}

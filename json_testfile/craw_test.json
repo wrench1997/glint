@@ -1,0 +1,1482 @@
+{
+    "": [
+        {
+            "url": "http://192.168.166.2/pikachu/",
+            "method": "GET",
+            "headers": {},
+            "data": "",
+            "source": "Target",
+            "hostid": 0
+        }
+    ],
+    "CollectLink": [
+        {
+            "url": "http://192.168.166.2/pikachu/index.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/burteforce/burteforce.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/burteforce/bf_form.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/burteforce/bf_server.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/burteforce/bf_client.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/burteforce/bf_token.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_reflected_get.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xsspost/post_login.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_stored.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_dom.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_dom_x.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xssblind/xss_blind.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_01.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_02.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_03.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_04.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/csrf/csrf.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/csrf/csrfget/csrf_get_login.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/csrf/csrfpost/csrf_post_login.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/csrf/csrftoken/token_get_login.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_id.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_str.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_search.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_x.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_iu/sqli_login.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_del.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_header/sqli_header_login.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_blind_b.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_blind_t.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_widebyte.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/rce/rce.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/rce/rce_ping.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/rce/rce_eval.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/fileinclude/fileinclude.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/fileinclude/fi_local.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/fileinclude/fi_remote.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafedownload/unsafedownload.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafedownload/down_nba.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafeupload/upload.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafeupload/clientcheck.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafeupload/servercheck.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafeupload/getimagesize.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/overpermission/op.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/overpermission/op1/op1_login.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/overpermission/op2/op2_login.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/dir/dir.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/dir/dir_list.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/infoleak/infoleak.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/infoleak/findabc.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unserilization/unserilization.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unserilization/unser.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xxe/xxe.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xxe/xxe_1.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/urlredirect/unsafere.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/urlredirect/urlredirect.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/ssrf/ssrf.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/ssrf/ssrf_curl.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/ssrf/ssrf_fgc.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/pkxss/index.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/inc/showvcode.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "JavaScript",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/dir/dir_list.php?title=jarheads.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/dir/dir_list.php?title=truman.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/ssrf/ssrf_fgc.php?file=http://127.0.0.1/pikachu/vul/ssrf/ssrf_info/info2.php",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafedownload/execdownload.php?filename=kb.png",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafedownload/execdownload.php?filename=ai.png",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafedownload/execdownload.php?filename=ns.png",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafedownload/execdownload.php?filename=rayal.png",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafedownload/execdownload.php?filename=mbl.png",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafedownload/execdownload.php?filename=camby.png",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafedownload/execdownload.php?filename=pj.png",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafedownload/execdownload.php?filename=bigben.png",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unsafedownload/execdownload.php?filename=sks.png",
+            "method": "GET",
+            "headers": {
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        }
+    ],
+    "Normal": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/fake_url_for_frame_fish",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        },
+        {
+            "url": "http://192.168.166.2/pikachu/pkxss/pkxss_login.php",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-0lXGo": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_blind_t.php?name=test1234\u0026submit=%E6%9F%A5%E8%AF%A2",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-1TtxW": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_widebyte.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "name=test1234\u0026submit=%E6%9F%A5%E8%AF%A2",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-3Drig": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/infoleak/findabc.php?username=Wrench1997\u0026password=Liujialin1997\u0026submit=Login",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-4xYSd": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/fileinclude/fi_local.php?filename=\u0026submit=%E6%8F%90%E4%BA%A4",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-6rDlh": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_01.php?message=test1234\u0026submit=submit",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-8TXcH": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xxe/xxe_1.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "xml=test1234\u0026submit=%E6%8F%90%E4%BA%A4",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-Fgx4r": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_reflected_get.php?message=test1234\u0026submit=submit",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-GtzM9": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_03.php?message=test1234\u0026submit=submit",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-HkCPh": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/rce/rce_ping.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "ipaddress=test1234\u0026submit=ping",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-ITpzA": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/unserilization/unser.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "o=test1234",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-P3WsB": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/burteforce/bf_server.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "username=Wrench1997\u0026password=Liujialin1997\u0026vcode=test1234\u0026submit=Login",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-QmbgR": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_04.php?message=test1234\u0026submit=submit",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-TKxmh": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/burteforce/bf_token.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "username=Wrench1997\u0026password=Liujialin1997\u0026token=96630645dadc1b465b379477777\u0026submit=Login",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-aL9Qf": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_str.php?name=test1234\u0026submit=%E6%9F%A5%E8%AF%A2",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-avdNZ": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_x.php?name=test1234\u0026submit=%E6%9F%A5%E8%AF%A2",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-cfmA2": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_02.php?message=test1234\u0026submit=submit",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-fHW7N": [
+        {
+            "url": "http://192.168.166.2/pikachu/pkxss/pkxss_login.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "username=Wrench1997\u0026password=Liujialin1997\u0026submit=login",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-fYvH5": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/burteforce/bf_form.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "username=Wrench1997\u0026password=Liujialin1997\u0026submit=Login",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-h07oP": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_search.php?name=test1234\u0026submit=%E6%90%9C%E7%B4%A2",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-hsLo8": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_blind_b.php?name=test1234\u0026submit=%E6%9F%A5%E8%AF%A2",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-iIOuH": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/xss/xss_dom_x.php?text=test1234",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-jkPIY": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_id.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "id=\u0026submit=%E6%9F%A5%E8%AF%A2",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-tKRyo": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/sqli/sqli_del.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "message=test1234\u0026submit=submit",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-uxxn1": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/rce/rce_eval.php",
+            "method": "POST",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Origin": "http://192.168.166.2",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "txt=test1234\u0026submit=%E6%8F%90%E4%BA%A4",
+            "source": "Document",
+            "hostid": 0
+        }
+    ],
+    "SubmitDoM-vuEir": [
+        {
+            "url": "http://192.168.166.2/pikachu/vul/fileinclude/fi_remote.php?filename=\u0026submit=%E6%8F%90%E4%BA%A4",
+            "method": "GET",
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate",
+                "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+                "Cookie": "PHPSESSID=9kbhu9ur8dtdb2tg20ff9kv934",
+                "Referer": "http://192.168.166.2/pikachu/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": " Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+            },
+            "data": "",
+            "source": "Document",
+            "hostid": 0
+        }
+    ]
+}

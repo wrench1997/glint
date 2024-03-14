@@ -1,0 +1,20 @@
+{
+    "Normal": [
+        {
+            "url": "http://192.168.166.8:8081/",
+            "method": "GET",
+            "headers": {
+                "Referer": "http://192.128.166.8:8081",
+                "Content-Type": "text/html; charset=utf-8",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Encoding": "gzip,deflate,br",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36",
+                "Host": "192.168.166.8:8081",
+                "Connection": "Keep-alive"
+            },
+            "data": "",
+            "source": "DOM",
+            "hostid": 0
+        }
+    ]
+}

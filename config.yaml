@@ -1,0 +1,27 @@
+MaxCrawlCount: 100
+
+DBUser: "itop"
+DBName: "itop"
+DBPassWord: "rjjsoft"
+
+FilterMode: "strict"
+TabRunTimeout: 20
+ExtraHeaders:
+
+ExtraHeadersString:
+
+AllDomainReturn: false
+
+SubDomainReturn: true
+
+IncognitoContext: false
+
+NoHeadless: true
+
+PathByFuzz: false
+
+Proxy: ""
+
+scan_depth: 10
+max_redirect_times: 5
+Qps: 20
