@@ -2032,11 +2032,11 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 			}
 			if errtester.startTesting(true) {
 				Result := util.VulnerableTcpOrUdpResult(Param.Url,
-					"sql error inject Vulnerable",
+					"cookie error inject Vulnerable",
 					[]string{},
 					[]string{},
 					"high",
-					Param.Hostid, string(plugin.SQL))
+					Param.Hostid, string(plugin.Cookie_inject))
 				gd.Alert(Result)
 				return Result, true, nil
 			}
