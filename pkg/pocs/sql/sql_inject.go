@@ -1940,6 +1940,58 @@ func (bsql *classBlindSQLInj) startTesting(Iscookieinject bool) bool {
 var Cert string
 var Mkey string
 
+func TestBlindSQLInjection(BlindSQL *classBlindSQLInj, Param *layers.PluginParam, gd *plugin.GroupData) (*util.ScanResult, bool, error) {
+	var errtester ClassSQLErrorMessages
+	if BlindSQL.origFeatures != nil {
+		errtester = ClassSQLErrorMessages{
+			TargetUrl: Param.Url,
+			LastJob: &layers.LastJob{
+				Features:       &layers.MFeatures{},
+				Layer:          BlindSQL.lastJob.Layer,
+				IsCookieInject: BlindSQL.lastJob.IsCookieInject,
+			},
+			variations: BlindSQL.variations,
+		}
+		if BlindSQL.origFeatures != nil {
+			BlindSQL.origFeatures.Request.CopyTo(&errtester.LastJob.Features.Request)
+			BlindSQL.origFeatures.Response.CopyTo(&errtester.LastJob.Features.Response)
+		}
+		defer errtester.ClearFeature()
+
+		// Test for Cookie Inject Vulnerability
+		if errtester.startTesting(true) {
+			result := util.VulnerableTcpOrUdpResult(
+				Param.Url,
+				"cookie error inject Vulnerable",
+				[]string{},
+				[]string{},
+				"high",
+				Param.Hostid,
+				string(plugin.Cookie_inject),
+			)
+			gd.Alert(result)
+			return result, true, nil
+		}
+
+		// Test for SQL Injection Vulnerability
+		if errtester.startTesting(false) {
+			result := util.VulnerableTcpOrUdpResult(
+				Param.Url,
+				"sql error inject Vulnerable",
+				[]string{},
+				[]string{},
+				"high",
+				Param.Hostid,
+				string(plugin.SQL),
+			)
+			gd.Alert(result)
+			return result, true, nil
+		}
+	}
+	// Return default values if no vulnerability found
+	return nil, false, nil
+}
+
 func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 	var err error
 	var variations *util.Variations
@@ -1988,9 +2040,6 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 
 	// defer BlindSQL.ClearData()
 	if BlindSQL.startTesting(false) {
-		// println(hostid)
-		// println("发现sql漏洞")
-		//....................
 		Result := util.VulnerableTcpOrUdpResult(Param.Url,
 			"sql inject Vulnerable",
 			[]string{},
@@ -1998,9 +2047,14 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 			"high",
 			Param.Hostid, string(plugin.SQL))
 		gd.Alert(Result)
-
 		return Result, true, nil
-	} else if BlindSQL.startTesting(true) {
+	} else {
+		Result, isvuln, _ := TestBlindSQLInjection(&BlindSQL, &Param, gd)
+		if isvuln {
+			return Result, true, nil
+		}
+	}
+	if BlindSQL.startTesting(true) {
 		Result := util.VulnerableTcpOrUdpResult(Param.Url,
 			"Cookie_inject inject Vulnerable",
 			[]string{},
@@ -2010,42 +2064,9 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 		gd.Alert(Result)
 		return Result, true, nil
 	} else {
-		if BlindSQL.origFeatures != nil {
-			errtester := ClassSQLErrorMessages{
-				TargetUrl: Param.Url,
-				LastJob: &layers.LastJob{Features: &layers.MFeatures{},
-					Layer:          BlindSQL.lastJob.Layer,
-					IsCookieInject: BlindSQL.lastJob.IsCookieInject},
-				variations: BlindSQL.variations,
-			}
-			if BlindSQL.origFeatures != nil {
-				BlindSQL.origFeatures.Request.CopyTo(&errtester.LastJob.Features.Request)
-				BlindSQL.origFeatures.Response.CopyTo(&errtester.LastJob.Features.Response)
-			}
-
-			defer errtester.ClearFeature()
-			if errtester.startTesting(true) {
-				if errtester.LastJob.IsCookieInject {
-					Result := util.VulnerableTcpOrUdpResult(Param.Url,
-						"cookie error inject Vulnerable",
-						[]string{},
-						[]string{},
-						"high",
-						Param.Hostid, string(plugin.Cookie_inject))
-					gd.Alert(Result)
-					return Result, true, nil
-				}
-			}
-			if errtester.startTesting(false) {
-				Result := util.VulnerableTcpOrUdpResult(Param.Url,
-					"sql error inject Vulnerable",
-					[]string{},
-					[]string{},
-					"high",
-					Param.Hostid, string(plugin.SQL))
-				gd.Alert(Result)
-				return Result, true, nil
-			}
+		Result, isvuln, _ := TestBlindSQLInjection(&BlindSQL, &Param, gd)
+		if isvuln {
+			return Result, true, nil
 		}
 	}
 	return nil, false, err
