@@ -69,6 +69,7 @@ var plainTexts = []string{
 	`<b>SQL error: </b> no such column`,
 	`org.springframework.jdbc.BadSqlGrammarException:`,
 	`java.sql.BatchUpdateException:`,
+	`SQL syntax`,
 }
 
 var regexTexts = []string{
