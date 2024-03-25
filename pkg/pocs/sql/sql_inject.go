@@ -504,7 +504,7 @@ func (bsql *classBlindSQLInj) confirmInjection(varIndex int,
 	if bsql.isNumeric {
 		randString = strconv.Itoa(randNum)
 	}
-	equalitySign := "=="
+	equalitySign := "="
 	// like injection
 	likeStr := ""
 	if likeInjection {
@@ -607,8 +607,8 @@ func (bsql *classBlindSQLInj) confirmInjection(varIndex int,
 	} else {
 		// some tests for strings
 		// test 1 TRUE  -------------------------------------------------------------
-		paramValue := origValue + quoteChar + " AND 2*3*8=6*8 AND " +
-			randString + equalitySign + randString + likeStr
+		paramValue := origValue + likeStr + quoteChar + " AND 2*3*8=6*8 AND " +
+			quoteChar + randString + quoteChar + equalitySign + quoteChar + randString + likeStr
 		logger.Debug("%s", paramValue)
 		testbody, err := bsql.lastJob.RequestByIndex(varIndex, bsql.TargetUrl, []byte(paramValue), opt)
 		if err != nil {
@@ -616,8 +616,6 @@ func (bsql *classBlindSQLInj) confirmInjection(varIndex int,
 			return false
 		}
 		defer testbody.Clear()
-		println(testbody.Response.String())
-		println(origFeatures.Response.String())
 		if !layers.CompareFeatures([]*layers.MFeatures{testbody}, []*layers.MFeatures{origFeatures}) {
 			logger.Debug("failed string test 1")
 			return false
@@ -625,7 +623,7 @@ func (bsql *classBlindSQLInj) confirmInjection(varIndex int,
 		bsql.addToConfirmInjectionHistory(paramValue, true)
 		// test 2 False  -------------------------------------------------------------
 		paramValue = origValue + likeStr + quoteChar + " AND 2*3*8=6*9 AND " + quoteChar +
-			randString + equalitySign + randString + likeStr
+			randString + quoteChar + equalitySign + quoteChar + randString + likeStr
 		logger.Debug("%s", paramValue)
 		testbody1, err := bsql.lastJob.RequestByIndex(varIndex, bsql.TargetUrl, []byte(paramValue), opt)
 		if err != nil {
@@ -640,7 +638,7 @@ func (bsql *classBlindSQLInj) confirmInjection(varIndex int,
 		bsql.addToConfirmInjectionHistory(paramValue, false)
 		// test 3 False  -------------------------------------------------------------
 		paramValue = origValue + likeStr + quoteChar + " AND 3*3<(2*4) AND " + quoteChar + randString +
-			randString + equalitySign + randString + likeStr
+			quoteChar + equalitySign + quoteChar + randString + likeStr
 		logger.Debug("%s", paramValue)
 		testbody2, err := bsql.lastJob.RequestByIndex(varIndex, bsql.TargetUrl, []byte(paramValue), opt)
 		if err != nil {
@@ -698,7 +696,6 @@ func (bsql *classBlindSQLInj) confirmInjection(varIndex int,
 			logger.Debug("failed string test 6")
 			return false
 		}
-
 		bsql.addToConfirmInjectionHistory(paramValue, false)
 		bsql.proofExploitTemplate = origValue + likeStr + quoteChar + " AND {query} AND " + quoteChar + randString + quoteChar + equalitySign + quoteChar + randString + likeStr
 		bsql.proofExploitVarIndex = varIndex
@@ -1893,9 +1890,9 @@ func (bsql *classBlindSQLInj) startTesting(Iscookieinject bool) bool {
 		bsql.origValue = "1"
 		bsql.isNumeric = true
 	}
-	if Iscookieinject {
-		bsql.isNumeric = false
-	}
+	// if Iscookieinject {
+	// 	bsql.isNumeric = false
+	// }
 	if bsql.variations != nil {
 		for _, p := range bsql.variations.Params {
 			if bsql.foundVulnOnVariation {

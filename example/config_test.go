@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"glint/config"
+	"io"
 	"io/ioutil"
 	"os"
 	"testing"
@@ -36,7 +37,7 @@ func Test_Getfild(t *testing.T) {
 	}
 	// 要记得关闭
 	defer jsonFile.Close()
-	byteValue, _ := ioutil.ReadAll(jsonFile)
+	byteValue, _ := io.ReadAll(jsonFile)
 	tc := config.TaskConfig{}
 	// a := make(map[string]interface{})
 	// json.Unmarshal(byteValue, &a)

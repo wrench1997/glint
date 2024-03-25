@@ -300,7 +300,7 @@ func (P *LastJob) RequestByIndex(idx int, originUrl string, paramValue []byte, o
 			P.Features = &feature
 		} else if strings.ToUpper(P.Layer.Method) == "GET" {
 			P.Layer.Headers["Cookie"] = originpayload
-			req, resp, err := P.Layer.Sess.Get(originpayload, P.Layer.Headers)
+			req, resp, err := P.Layer.Sess.Get(originUrl, P.Layer.Headers)
 			if err != nil {
 				logger.Debug("Plreq request error: %v", err)
 				return nil, err
