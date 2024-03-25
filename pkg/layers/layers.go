@@ -37,6 +37,7 @@ type LastJob struct {
 	Features         *MFeatures
 	ResponseDuration time.Duration
 	Isencode         bool
+	IsCookieInject   bool
 }
 
 type MFeatures struct {

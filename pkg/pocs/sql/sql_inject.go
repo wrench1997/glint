@@ -1919,6 +1919,7 @@ func (bsql *classBlindSQLInj) startTesting(Iscookieinject bool) bool {
 					doTimingTestsMySQL,
 					doTimingTestsMSSQL,
 					*bsql.TaskCtx, opt)
+				bsql.lastJob.IsCookieInject = true
 			} else {
 				bsql.performSQLiTests(p,
 					doBooleanTests,
@@ -1927,6 +1928,7 @@ func (bsql *classBlindSQLInj) startTesting(Iscookieinject bool) bool {
 					doTimingTestsMSSQL,
 					*bsql.TaskCtx,
 					nil)
+				bsql.lastJob.IsCookieInject = false
 			}
 		}
 	}
@@ -2010,8 +2012,10 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 	} else {
 		if BlindSQL.origFeatures != nil {
 			errtester := ClassSQLErrorMessages{
-				TargetUrl:  Param.Url,
-				LastJob:    &layers.LastJob{Features: &layers.MFeatures{}},
+				TargetUrl: Param.Url,
+				LastJob: &layers.LastJob{Features: &layers.MFeatures{},
+					Layer:          BlindSQL.lastJob.Layer,
+					IsCookieInject: BlindSQL.lastJob.IsCookieInject},
 				variations: BlindSQL.variations,
 			}
 			if BlindSQL.origFeatures != nil {
@@ -2020,6 +2024,18 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 			}
 
 			defer errtester.ClearFeature()
+			if errtester.startTesting(true) {
+				if errtester.LastJob.IsCookieInject {
+					Result := util.VulnerableTcpOrUdpResult(Param.Url,
+						"cookie error inject Vulnerable",
+						[]string{},
+						[]string{},
+						"high",
+						Param.Hostid, string(plugin.Cookie_inject))
+					gd.Alert(Result)
+					return Result, true, nil
+				}
+			}
 			if errtester.startTesting(false) {
 				Result := util.VulnerableTcpOrUdpResult(Param.Url,
 					"sql error inject Vulnerable",
@@ -2027,16 +2043,6 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 					[]string{},
 					"high",
 					Param.Hostid, string(plugin.SQL))
-				gd.Alert(Result)
-				return Result, true, nil
-			}
-			if errtester.startTesting(true) {
-				Result := util.VulnerableTcpOrUdpResult(Param.Url,
-					"cookie error inject Vulnerable",
-					[]string{},
-					[]string{},
-					"high",
-					Param.Hostid, string(plugin.Cookie_inject))
 				gd.Alert(Result)
 				return Result, true, nil
 			}

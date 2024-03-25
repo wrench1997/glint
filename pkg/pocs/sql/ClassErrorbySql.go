@@ -266,6 +266,7 @@ func (errsql *ClassSQLErrorMessages) startTesting(Iscookieinject bool) bool {
 	}
 	if errsql.variations != nil {
 		for _, p := range errsql.variations.Params {
+
 			if errsql.testForError() {
 				return true
 			}
