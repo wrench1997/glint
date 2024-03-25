@@ -280,6 +280,8 @@ type Variations struct {
 	// Params is a list of posted parameters (in case of URL encoded parameters).
 	Params []Param `json:"params"`
 
+	IscookieParams bool
+
 	JsonParams JSONKeyValueIterator
 	//Jsonvale
 	JsonValue map[string]interface{}
@@ -443,9 +445,16 @@ func (p *Variations) Release() string {
 	} else {
 		for i, Param := range p.Params {
 			buf.WriteString(Param.Name + "=" + Param.Value)
-			if i != p.Len()-1 {
-				buf.WriteString("&")
+			if p.IscookieParams {
+				if i != p.Len()-1 {
+					buf.WriteString(";")
+				}
+			} else {
+				if i != p.Len()-1 {
+					buf.WriteString("&")
+				}
 			}
+
 		}
 	}
 
@@ -587,6 +596,20 @@ func (p *Variations) SetPayloadByindex(index int, uri string, payload string, me
 				logger.Warning("当前url超出参数最小发送数,自动pass不填写参数")
 			}
 		}
+	} else if strings.ToUpper(method) == "COOKIE" {
+		for idx, kv := range p.Params {
+			//小于5一个链接参数不能超过5
+			if idx <= MAX_SEND_COUNT {
+				if idx == index {
+					p.Set(kv.Name, payload)
+					str := p.Release()
+					p.Set(kv.Name, kv.Value)
+					return str
+				}
+			} else {
+				logger.Warning("当前url超出参数最小发送数,自动pass不填写参数")
+			}
+		}
 	}
 	return result
 }
@@ -613,12 +636,52 @@ func getContentType(data string) contentType {
 	return ctunknown
 }
 
-func ParseUri(uri string, body []byte, method string, content_type string, headers map[string]string) (*Variations, error) {
+type errcode string
+
+const Not_supported errcode = "post data is empty"
+
+func ParseUri(
+	uri string,
+	body []byte,
+	method string,
+	content_type string,
+	headers map[string]string,
+	o map[string]interface{},
+) (*Variations, error) {
+
 	var (
 		err error
 		//index    int
 		Postinfo Variations
+		Iscookie bool
 	)
+
+	if v, ok := o["is_cookie_inject"]; ok {
+		b, _ := v.(bool)
+		Iscookie = b
+	}
+
+	if Iscookie {
+		var key string
+		var value string
+		strs := strings.Split(headers["Cookie"], ";")
+		for i, kv := range strs {
+			kvs := strings.Split(string(kv), "=")
+			// strings.Split()
+			for i, v := range kvs {
+				if i == 0 {
+					key = v
+				} else {
+					value = value + v
+				}
+			}
+
+			Post := Param{Name: key, Value: value, Index: i, ContentType: content_type}
+			Postinfo.Params = append(Postinfo.Params, Post)
+		}
+		Postinfo.MimeType = content_type
+		sort.Sort(Postinfo)
+	}
 
 	json_map := make(map[string]interface{})
 	if strings.ToUpper(method) == "POST" {
@@ -698,7 +761,7 @@ func ParseUri(uri string, body []byte, method string, content_type string, heade
 					}
 					defer p.Close()
 
-					body, err := ioutil.ReadAll(p)
+					body, err := io.ReadAll(p)
 					if err != nil {
 						return nil, err
 					}
@@ -729,6 +792,9 @@ func ParseUri(uri string, body []byte, method string, content_type string, heade
 
 	} else if strings.ToUpper(method) == "GET" {
 		if !funk.Contains(string(uri), "?") {
+			if Iscookie {
+				goto tocookie
+			}
 			return nil, fmt.Errorf("GET data is empty")
 		}
 		urlparams := strings.Split(string(uri), "?")[1]
@@ -752,6 +818,12 @@ func ParseUri(uri string, body []byte, method string, content_type string, heade
 	} else {
 		err = fmt.Errorf("method not supported")
 	}
+tocookie:
+	if Iscookie {
+		Postinfo.IscookieParams = true
+		return &Postinfo, err
+	}
+
 	return nil, err
 }
 
@@ -1253,4 +1325,12 @@ func KillcustomJS() error {
 		return err
 	}
 	return nil
+}
+
+// 计时器函数
+func TimeFunc(f func() interface{}) (interface{}, float64) {
+	start := time.Now()
+	result := f()
+	elapsed := time.Since(start).Seconds()
+	return result, elapsed
 }

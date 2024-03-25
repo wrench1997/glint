@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"os"
 	"reflect"
@@ -279,7 +280,7 @@ func ReadResultConf(file string) (map[string]interface{}, error) {
 	}
 	// 要记得关闭
 	defer jsonFile.Close()
-	byteValue, _ := ioutil.ReadAll(jsonFile)
+	byteValue, _ := io.ReadAll(jsonFile)
 	// FileJsonUrls := make(map[string]interface{})
 	// err = json.Unmarshal([]byte(byteValue), data)
 	// if err != nil {

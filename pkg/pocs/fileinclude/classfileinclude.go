@@ -101,7 +101,7 @@ func FileincludeValid(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 		Param.ContentType = value
 	}
 	logger.Success("Url:%s", Param.Url)
-	variations, err = util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers)
+	variations, err = util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers, nil)
 	//赋值
 	CFileInclude.variations = variations
 	CFileInclude.lastJob.Layer.Sess = sess

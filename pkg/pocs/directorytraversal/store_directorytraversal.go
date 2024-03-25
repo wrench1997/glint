@@ -50,7 +50,7 @@ func TraversalVaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 		Param.ContentType = value
 	}
 
-	variations, err = util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers)
+	variations, err = util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers, nil)
 	//赋值
 	DirectoryTraversal.variations = variations
 	DirectoryTraversal.lastJob.Layer.Sess = sess

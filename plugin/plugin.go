@@ -46,6 +46,7 @@ const (
 	Cookie_detection Plugin_type = "rj-022-0001"
 	HSTS_detection   Plugin_type = "rj-023-0001"
 	ParamPoll        Plugin_type = "rj-024-0001"
+	Cookie_inject    Plugin_type = "rj-025-0001"
 )
 
 type Plugin struct {

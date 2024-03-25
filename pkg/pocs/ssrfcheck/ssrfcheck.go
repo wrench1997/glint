@@ -33,7 +33,7 @@ func Ssrf(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 			PrivateKey:    Param.CertKey,
 		})
 
-	params, err := util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers)
+	params, err := util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers, nil)
 	if err != nil {
 		logger.Debug(err.Error())
 		return nil, false, err

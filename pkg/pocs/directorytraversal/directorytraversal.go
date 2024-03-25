@@ -91,7 +91,7 @@ func (c *classDirectoryTraversal) testInjection(varIndex int, value string, dont
 	if value == "../../../../../../../../../../../../../../windows/win.ini" && c.TargetUrl == "http://192.168.166.2/pikachu/vul/dir/dir_list.php?title=truman.php" {
 		logger.Debug("Test DirectoryTraversal checkpoint")
 	}
-	Features, err := c.lastJob.RequestByIndex(varIndex, c.TargetUrl, []byte(value))
+	Features, err := c.lastJob.RequestByIndex(varIndex, c.TargetUrl, []byte(value), nil)
 	if err != nil {
 		logger.Debug(err.Error())
 		return false
@@ -102,7 +102,7 @@ func (c *classDirectoryTraversal) testInjection(varIndex int, value string, dont
 		// here we need to make sure it's not a false positive
 		// mix up the value to cause the injection to fail, the patterns should not be present in response
 
-		Feature, err := c.lastJob.RequestByIndex(varIndex, c.TargetUrl, []byte(" "+value+util.RandStr(5)))
+		Feature, err := c.lastJob.RequestByIndex(varIndex, c.TargetUrl, []byte(" "+value+util.RandStr(5)), nil)
 		if err != nil {
 			logger.Debug("%s", err.Error())
 			return false
@@ -114,7 +114,7 @@ func (c *classDirectoryTraversal) testInjection(varIndex int, value string, dont
 			return false
 		}
 		// request it again
-		_, err = c.lastJob.RequestByIndex(varIndex, c.TargetUrl, []byte(value))
+		_, err = c.lastJob.RequestByIndex(varIndex, c.TargetUrl, []byte(value), nil)
 		if err != nil {
 			logger.Debug(err.Error())
 			return false
@@ -159,7 +159,7 @@ func (c *classDirectoryTraversal) shouldRunAllTests(index int, origValue string)
 	}
 
 	// make a request with the original value again
-	body_Feature, err := c.lastJob.RequestByIndex(index, c.TargetUrl, []byte(origValue))
+	body_Feature, err := c.lastJob.RequestByIndex(index, c.TargetUrl, []byte(origValue), nil)
 	if err != nil {
 		logger.Error(err.Error())
 		return false
@@ -193,7 +193,7 @@ func (c *classDirectoryTraversal) shouldRunAllTests(index int, origValue string)
 	}
 
 	// make the request for the false value
-	falseFeatures, err := c.lastJob.RequestByIndex(index, c.TargetUrl, []byte(falseValue))
+	falseFeatures, err := c.lastJob.RequestByIndex(index, c.TargetUrl, []byte(falseValue), nil)
 
 	if err != nil {
 		logger.Debug("RequestByIndex error:%s", err.Error())
@@ -207,7 +207,7 @@ func (c *classDirectoryTraversal) shouldRunAllTests(index int, origValue string)
 	}
 
 	// make the request for the true value
-	trueFeatures, err := c.lastJob.RequestByIndex(index, c.TargetUrl, []byte(trueValue))
+	trueFeatures, err := c.lastJob.RequestByIndex(index, c.TargetUrl, []byte(trueValue), nil)
 
 	if err != nil {
 		logger.Debug("RequestByIndex error:%s", err.Error())

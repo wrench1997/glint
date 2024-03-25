@@ -1,0 +1,24 @@
+{
+    "GET-sqli-Less-20-index-php": [
+      {
+        "url": "http://192.168.166.2/sqli/Less-20/index.php",
+        "method": "GET",
+        "headers": {
+          "Host": "192.168.166.2",
+          "Cache-Control": "max-age=0",
+          "DNT": "1",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Referer": "http://192.168.166.2/sqli/Less-20/",
+          "Accept-Encoding": "gzip, deflate",
+          "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+          "Cookie": "uname=admin; JSESSIONID.867445f8=node01pbfebovpj3na1emjyyxxmgf11.node0",
+          "Connection": "close"
+        },
+        "data": "",
+        "source": "HTTP Request",
+        "hostid": 0
+      }
+    ]
+  }

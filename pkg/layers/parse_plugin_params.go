@@ -193,7 +193,7 @@ func (p *PluginParam) GenerateVariable() (*util.Variations, error) {
 	if value, ok := p.Headers["Content-Type"]; ok {
 		p.ContentType = value
 	}
-	variations, err := util.ParseUri(p.Url, []byte(p.Body), p.Method, p.ContentType, p.Headers)
+	variations, err := util.ParseUri(p.Url, []byte(p.Body), p.Method, p.ContentType, p.Headers, nil)
 	return variations, err
 }
 

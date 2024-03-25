@@ -731,7 +731,7 @@ func (t *Tabs) CheckPayloadLocation(newpayload string, isflag bool) ([]string, s
 	} else {
 		PostData := t.PostData
 		if value, ok := t.Headers["Content-Type"]; ok {
-			params, err := util.ParseUri("", PostData, "POST", value.(string), nil)
+			params, err := util.ParseUri("", PostData, "POST", value.(string), nil, nil)
 			if err != nil {
 				logger.Error("CheckPayloadLocation request error: %v", err)
 				return nil, "", err

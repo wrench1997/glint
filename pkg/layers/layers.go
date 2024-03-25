@@ -129,7 +129,7 @@ func (P *LastJob) RequestByIndexs(ivs []IdxVariable, originUrl string, o ...map[
 		}
 	}
 
-	origin, err := util.ParseUri(originUrl, P.Layer.Body, P.Layer.Method, P.Layer.ContentType, P.Layer.Headers)
+	origin, err := util.ParseUri(originUrl, P.Layer.Body, P.Layer.Method, P.Layer.ContentType, P.Layer.Headers, nil)
 	if err != nil {
 		return &feature, err
 	}
@@ -189,52 +189,66 @@ func (P *LastJob) RequestByIndexs(ivs []IdxVariable, originUrl string, o ...map[
 	return &feature, nil
 }
 
-func (P *LastJob) RequestByIndex(idx int, originUrl string, paramValue []byte, o ...map[string]string) (*MFeatures, error) {
+func (P *LastJob) RequestByIndex(idx int, originUrl string, paramValue []byte, o map[string]string) (*MFeatures, error) {
 	var (
-		feature       MFeatures
-		Timeout       int
-		err           error
-		isencode      string
-		filename      string
-		contenttype   string
-		escapeValue   string
-		originpayload string
+		feature        MFeatures
+		Timeout        int
+		err            error
+		isencode       string
+		filename       string
+		contenttype    string
+		escapeValue    string
+		originpayload  string
+		isCookieInject string
+		origin         *util.Variations
 		//is_the_bytefilename string
 		// ValueType     string
 	)
 	// defer feature.Clear()
-	for _, option := range o {
-		if value, ok := option["timeout"]; ok {
+	if o != nil {
+		if value, ok := o["timeout"]; ok {
 			Timeout, err = strconv.Atoi(value)
 			if err != nil {
 				return nil, err
 			}
 			P.Layer.Sess.Timeout = time.Duration(Timeout) * time.Second
 		}
-		if value, ok := option["encode"]; ok {
+		if value, ok := o["encode"]; ok {
 			isencode = value
 		}
-		if value, ok := option["filename"]; ok {
+		if value, ok := o["filename"]; ok {
 			filename = value
 		}
-		if value, ok := option["contenttype"]; ok {
+		if value, ok := o["contenttype"]; ok {
 			contenttype = value
 		}
-
-		// if value, ok := option["is_the_bytefilename"]; ok {
-		// 	is_the_bytefilename = value
-		// }
-
-		// if value, ok := option["ValueType"]; ok {
-		// 	isBase64 = value
-		// }
-
+		if value, ok := o["is_cookie_inject"]; ok {
+			isCookieInject = value
+		}
 	}
 
-	origin, err := util.ParseUri(originUrl, P.Layer.Body, P.Layer.Method, P.Layer.ContentType, P.Layer.Headers)
-	if err != nil {
-		return nil, err
+	// if value, ok := option["is_the_bytefilename"]; ok {
+	// 	is_the_bytefilename = value
+	// }
+
+	// if value, ok := option["ValueType"]; ok {
+	// 	isBase64 = value
+	// }
+
+	if isCookieInject == "true" {
+		o := make(map[string]interface{})
+		o["is_cookie_inject"] = true
+		origin, err = util.ParseUri(originUrl, P.Layer.Body, P.Layer.Method, P.Layer.ContentType, P.Layer.Headers, o)
+		if err != nil {
+			return nil, err
+		}
+	} else {
+		origin, err = util.ParseUri(originUrl, P.Layer.Body, P.Layer.Method, P.Layer.ContentType, P.Layer.Headers, nil)
+		if err != nil {
+			return nil, err
+		}
 	}
+
 	//设置文件名和文件属性
 	if filename != "" {
 		for idx, v := range origin.Params {
@@ -251,7 +265,11 @@ func (P *LastJob) RequestByIndex(idx int, originUrl string, paramValue []byte, o
 		escapeValue = url.QueryEscape(string(paramValue))
 	}
 
-	originpayload = origin.SetPayloadByindex(idx, originUrl, escapeValue, P.Layer.Method)
+	if isCookieInject == "true" {
+		originpayload = origin.SetPayloadByindex(idx, originUrl, escapeValue, "Cookie")
+	} else {
+		originpayload = origin.SetPayloadByindex(idx, originUrl, escapeValue, P.Layer.Method)
+	}
 
 	// if strings.EqualFold(is_the_bytefilename, "yes") {
 
@@ -263,35 +281,74 @@ func (P *LastJob) RequestByIndex(idx int, originUrl string, paramValue []byte, o
 		t1post := time.Since(t)
 		P.ResponseDuration = t1post
 	}(t1pre)
-	if strings.ToUpper(P.Layer.Method) == "POST" {
-		req, resp, err := P.Layer.Sess.Post(originUrl, P.Layer.Headers, []byte(originpayload))
-		if err != nil {
-			logger.Debug("Plreq request error: %v", err)
-			return nil, err
+
+	if isCookieInject == "true" {
+		if strings.ToUpper(P.Layer.Method) == "POST" {
+			P.Layer.Headers["Cookie"] = originpayload
+			req, resp, err := P.Layer.Sess.Post(originUrl, P.Layer.Headers, P.Layer.Body)
+			if err != nil {
+				logger.Debug("Plreq request error: %v", err)
+				return nil, err
+			}
+			defer req.ResetBody()
+			defer req.Reset()
+			defer resp.ResetBody()
+			defer resp.Reset()
+			feature.Index = idx
+			req.CopyTo(&feature.Request)
+			resp.CopyTo(&feature.Response)
+			P.Features = &feature
+		} else if strings.ToUpper(P.Layer.Method) == "GET" {
+			P.Layer.Headers["Cookie"] = originpayload
+			req, resp, err := P.Layer.Sess.Get(originpayload, P.Layer.Headers)
+			if err != nil {
+				logger.Debug("Plreq request error: %v", err)
+				return nil, err
+			}
+			defer req.ResetBody()
+			defer req.Reset()
+			defer resp.ResetBody()
+			defer resp.Reset()
+			feature.Index = idx
+			req.CopyTo(&feature.Request)
+			resp.CopyTo(&feature.Response)
+			P.Features = &feature
 		}
 
-		feature.Index = idx
-		req.CopyTo(&feature.Request)
-		resp.CopyTo(&feature.Response)
-		P.Features = &feature
+	} else {
+		if strings.ToUpper(P.Layer.Method) == "POST" {
+			req, resp, err := P.Layer.Sess.Post(originUrl, P.Layer.Headers, []byte(originpayload))
+			if err != nil {
+				logger.Debug("Plreq request error: %v", err)
+				return nil, err
+			}
+			defer req.ResetBody()
+			defer req.Reset()
+			defer resp.ResetBody()
+			defer resp.Reset()
+			feature.Index = idx
+			req.CopyTo(&feature.Request)
+			resp.CopyTo(&feature.Response)
+			P.Features = &feature
 
-	} else if strings.ToUpper(P.Layer.Method) == "GET" {
+		} else if strings.ToUpper(P.Layer.Method) == "GET" {
 
-		req, resp, err := P.Layer.Sess.Get(originpayload, P.Layer.Headers)
-		if err != nil {
-			logger.Debug("Plreq request error: %v", err)
-			return nil, err
+			req, resp, err := P.Layer.Sess.Get(originpayload, P.Layer.Headers)
+			if err != nil {
+				logger.Debug("Plreq request error: %v", err)
+				return nil, err
+			}
+			defer req.ResetBody()
+			defer req.Reset()
+			defer resp.ResetBody()
+			defer resp.Reset()
+
+			feature.Index = idx
+			req.CopyTo(&feature.Request)
+			resp.CopyTo(&feature.Response)
+			P.Features = &feature
+
 		}
-
-		defer req.ResetBody()
-		defer req.Reset()
-		defer resp.ResetBody()
-		defer resp.Reset()
-
-		feature.Index = idx
-		req.CopyTo(&feature.Request)
-		resp.CopyTo(&feature.Response)
-		P.Features = &feature
 	}
 
 	return &feature, nil

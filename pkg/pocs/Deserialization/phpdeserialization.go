@@ -79,7 +79,7 @@ func PHPDeserializaValid(args *plugin.GroupData) (*util.ScanResult, bool, error)
 	if value, ok := Param.Headers["Content-Type"]; ok {
 		Param.ContentType = value
 	}
-	variations, err = util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers)
+	variations, err = util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers, nil)
 	//赋值
 	CclassDeserializa.variations = variations
 	CclassDeserializa.lastJob.Layer.Sess = sess

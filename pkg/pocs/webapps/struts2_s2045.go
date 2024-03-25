@@ -164,7 +164,7 @@ func Struts2_045_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 		Param.ContentType = value
 	}
 
-	variations, err := util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers)
+	variations, err := util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers, nil)
 	if err != nil {
 		// logger.Error(err.Error())
 		return nil, false, errors.New("not found")

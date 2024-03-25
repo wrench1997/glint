@@ -20,12 +20,12 @@ import (
 
 func Test_Post(t *testing.T) {
 	body := "file=123456.fkuior.ceye.io&read=load+file"
-	param, _ := util.ParseUri("", []byte(body), "POST", "application/x-www-form-urlencoded", nil)
+	param, _ := util.ParseUri("", []byte(body), "POST", "application/x-www-form-urlencoded", nil, nil)
 	logger.Debug("%v", param)
 	pal := param.SetPayloads("", "122", "POST")
 	logger.Debug("%v", pal)
 	//Get
-	param1, _ := util.ParseUri("https://www.google.com/search?q=dasdas&oq=dasdas", []byte(""), "GET", "None", nil)
+	param1, _ := util.ParseUri("https://www.google.com/search?q=dasdas&oq=dasdas", []byte(""), "GET", "None", nil, nil)
 	logger.Debug("%v", param1)
 	pal1 := param1.SetPayloads("https://www.google.com/search?q=dasdas&oq=dasdas", "122", "GET")
 	logger.Debug("%v", pal1)

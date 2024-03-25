@@ -93,7 +93,7 @@ func CmdValid(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 	// variations,err = util.ParseUri(url)
 	// BlindSQL.variations =
 
-	variations, err = util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers)
+	variations, err = util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers, nil)
 	//赋值
 	WebShell.variations = variations
 	WebShell.lastJob.Layer.Sess = sess
@@ -165,7 +165,7 @@ func (c *classWebShell) startTesting() bool {
 				}
 				for _, payload := range domain_payload_list {
 					s1 := strings.ReplaceAll(payload, "{domain}", _reverse.Url)
-					f, err := c.lastJob.RequestByIndex(p.Index, c.TargetUrl, []byte(s1))
+					f, err := c.lastJob.RequestByIndex(p.Index, c.TargetUrl, []byte(s1), nil)
 					if err != nil {
 						return false
 					}
@@ -200,7 +200,7 @@ func (c *classWebShell) startTesting() bool {
 			}
 			for _, payload := range payloads {
 				//s1 := strings.ReplaceAll(payload, "{domain}", _reverse.Url)
-				report, err := c.lastJob.RequestByIndex(p.Index, c.TargetUrl, []byte(payload))
+				report, err := c.lastJob.RequestByIndex(p.Index, c.TargetUrl, []byte(payload), nil)
 				if err != nil {
 					continue
 				}

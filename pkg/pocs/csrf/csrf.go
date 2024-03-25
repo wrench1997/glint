@@ -76,7 +76,7 @@ func Csrfeval(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 	}
 
 	if strings.ToUpper(Param.Method) == "POST" {
-		params, err := util.ParseUri(Param.Url, []byte(Param.Body), "POST", ContentType, Param.Headers)
+		params, err := util.ParseUri(Param.Url, []byte(Param.Body), "POST", ContentType, Param.Headers, nil)
 		if err != nil {
 			logger.Debug(err.Error())
 			return nil, false, fmt.Errorf(err.Error())

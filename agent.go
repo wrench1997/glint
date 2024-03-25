@@ -254,7 +254,7 @@ func (s *SProxy) Run() error {
 	global.VulnResultReporter.Exweb_task_info.Scan_time = over_time
 	global.VulnResultReporter.Exweb_task_info.End_time = EndTime.Local().Format("2006-01-02 15:04:05")
 	// global.VulnResultReporter.Exweb_task_info.End_time =
-	//Export ScanReport
+	// Export ScanReport
 	data, err := json.Marshal(global.VulnResultReporter)
 	if err != nil {
 		log.Fatal(err)
