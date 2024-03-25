@@ -189,6 +189,24 @@ func (P *LastJob) RequestByIndexs(ivs []IdxVariable, originUrl string, o ...map[
 	return &feature, nil
 }
 
+func (P *LastJob) Cookie_req(idx int, url *string, headers *map[string]string, body *[]byte) (*MFeatures, error) {
+	var feature MFeatures
+	req, resp, err := P.Layer.Sess.Request(P.Layer.Method, url, headers, body)
+	if err != nil {
+		logger.Debug("checkIfResponseIsStable error: %s", err.Error())
+		return nil, err
+	}
+	defer req.ResetBody()
+	defer req.Reset()
+	defer resp.ResetBody()
+	defer resp.Reset()
+	feature.Index = idx
+	req.CopyTo(&feature.Request)
+	resp.CopyTo(&feature.Response)
+	P.Features = &feature
+	return &feature, nil
+}
+
 func (P *LastJob) RequestByIndex(idx int, originUrl string, paramValue []byte, o map[string]string) (*MFeatures, error) {
 	var (
 		feature        MFeatures

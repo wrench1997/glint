@@ -147,27 +147,21 @@ func (bsql *classBlindSQLInj) checkIfResponseIsStable(varIndex int, Iscookieinje
 	var err error
 	s := time.Now()
 	if Iscookieinject {
-
-		req, resp, err := bsql.lastJob.Layer.Sess.Request(bsql.lastJob.Layer.Method, &bsql.TargetUrl, &bsql.lastJob.Layer.Headers, &bsql.lastJob.Layer.Body)
-
+		opt := make(map[string]string)
+		opt["is_cookie_inject"] = "true"
+		Feature, err = bsql.lastJob.RequestByIndex(varIndex, bsql.TargetUrl, []byte(bsql.origValue), opt)
 		if err != nil {
 			logger.Debug("checkIfResponseIsStable error: %s", err.Error())
 			return false
 		}
-		defer req.ResetBody()
-		defer req.Reset()
-		defer resp.ResetBody()
-		defer resp.Reset()
-		bsql.origBody = resp.String()
-		var Feature layers.MFeatures
-		req.CopyTo(&Feature.Request)
-		resp.CopyTo(&Feature.Response)
+		body1 := bsql.filterBody(Feature.Response.String(), bsql.origValue)
+		//body1Features := Feature
 		Time1 = time.Since(s)
+		bsql.origBody = body1
+		bsql.origFeatures = Feature
 		bsql.lastJob.ResponseDuration = Time1
 		bsql.longDuration = 8
 		bsql.shortDuration = 5
-		bsql.origFeatures = &Feature
-		bsql.origStatusCode = resp.StatusCode()
 		return true
 	} else {
 		Feature, err = bsql.lastJob.RequestByIndex(varIndex, bsql.TargetUrl, []byte(bsql.origValue), nil)
@@ -2014,19 +2008,29 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 		gd.Alert(Result)
 		return Result, true, nil
 	} else {
-		if BlindSQL.lastJob.Features != nil {
+		if BlindSQL.origFeatures != nil {
 			errtester := ClassSQLErrorMessages{
 				TargetUrl:  Param.Url,
 				LastJob:    &layers.LastJob{Features: &layers.MFeatures{}},
 				variations: BlindSQL.variations,
 			}
-			if BlindSQL.lastJob.Features != nil {
-				BlindSQL.lastJob.Features.Request.CopyTo(&errtester.LastJob.Features.Request)
-				BlindSQL.lastJob.Features.Response.CopyTo(&errtester.LastJob.Features.Response)
+			if BlindSQL.origFeatures != nil {
+				BlindSQL.origFeatures.Request.CopyTo(&errtester.LastJob.Features.Request)
+				BlindSQL.origFeatures.Response.CopyTo(&errtester.LastJob.Features.Response)
 			}
 
 			defer errtester.ClearFeature()
-			if errtester.startTesting() {
+			if errtester.startTesting(false) {
+				Result := util.VulnerableTcpOrUdpResult(Param.Url,
+					"sql error inject Vulnerable",
+					[]string{},
+					[]string{},
+					"high",
+					Param.Hostid, string(plugin.SQL))
+				gd.Alert(Result)
+				return Result, true, nil
+			}
+			if errtester.startTesting(true) {
 				Result := util.VulnerableTcpOrUdpResult(Param.Url,
 					"sql error inject Vulnerable",
 					[]string{},

@@ -23,7 +23,7 @@ func Test_cookieSqlBlinddvwa(t *testing.T) {
 	TaskYamlConfig := config.TaskYamlConfig{}
 	TaskYamlConfig.Proxy = "127.0.0.1:7777"
 	TaskYamlConfig.NoHeadless = true
-	TaskYamlConfig.TabRunTimeout = 20 * time.Second
+	TaskYamlConfig.TabRunTimeout = 20 * time.Minute
 	TaskYamlConfig.ScanDepth = 4
 	TaskConfig.Yaml = TaskYamlConfig
 	TaskConfig.JsonOrYaml = true
