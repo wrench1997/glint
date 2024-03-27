@@ -160,8 +160,6 @@ func (bsql *classBlindSQLInj) checkIfResponseIsStable(varIndex int, Iscookieinje
 		bsql.origBody = body1
 		bsql.origFeatures = Feature
 		bsql.lastJob.ResponseDuration = Time1
-		bsql.longDuration = 8
-		bsql.shortDuration = 5
 		return true
 	} else {
 		Feature, err = bsql.lastJob.RequestByIndex(varIndex, bsql.TargetUrl, []byte(bsql.origValue), nil)
@@ -1339,6 +1337,9 @@ func (bsql *classBlindSQLInj) testTiming(varIndex int, paramValue string, opt ma
 		paramValue = strings.ReplaceAll(paramValue, "{RANDSTR}", util.RandStr(8))
 		paramValue = strings.ReplaceAll(paramValue, "{RANDNUMBER}", strconv.Itoa(rand.Intn(1000)))
 		logger.Debug("paramValue:%s", paramValue)
+		if paramValue == "0'XOR(if(now()=sysdate(),sleep(15), 0))XOR'Z" {
+			logger.Debug("paramValue:%s", paramValue)
+		}
 		timeout := make(map[string]string)
 		timeout["timeout"] = strconv.Itoa(timeOutSecs + 20)
 		bsql.lastJob.Layer.Sess.Timeout = time.Duration(int(timeOutSecs+20)) * time.Second
@@ -1831,7 +1832,7 @@ func (bsql *classBlindSQLInj) performSQLiTests(p util.Param,
 		if doTimingTestsMySQL {
 			logger.Debug("doTimingTestsMySQL")
 
-			actualPayload := `if(now()=sysdate(),sleep({SLEEP}), 0)`
+			actualPayload := `if(now()=sysdate(),sleep({SLEEP}),0)`
 			singleQuotePayload := "0'XOR(" + actualPayload + ")XOR'Z"
 			doubleQuotePayload := `0"XOR(` + actualPayload + `)XOR"Z`
 
@@ -1884,9 +1885,11 @@ func (bsql *classBlindSQLInj) startTesting(Iscookieinject bool) bool {
 		bsql.origValue = "1"
 		bsql.isNumeric = true
 	}
+
 	// if Iscookieinject {
 	// 	bsql.isNumeric = false
 	// }
+
 	if bsql.variations != nil {
 		for _, p := range bsql.variations.Params {
 			if bsql.foundVulnOnVariation {
@@ -1913,22 +1916,22 @@ func (bsql *classBlindSQLInj) startTesting(Iscookieinject bool) bool {
 				opt := make(map[string]string)
 				opt["is_cookie_inject"] = "true"
 				bsql.inputIsStable = true
-				bsql.performSQLiTests(p,
+				bsql.lastJob.IsCookieInject = true
+				return bsql.performSQLiTests(p,
 					doBooleanTests,
 					doTimingTests,
 					doTimingTestsMySQL,
 					doTimingTestsMSSQL,
 					*bsql.TaskCtx, opt)
-				bsql.lastJob.IsCookieInject = true
 			} else {
-				bsql.performSQLiTests(p,
+				bsql.lastJob.IsCookieInject = false
+				return bsql.performSQLiTests(p,
 					doBooleanTests,
 					doTimingTests,
 					doTimingTestsMySQL,
 					doTimingTestsMSSQL,
 					*bsql.TaskCtx,
 					nil)
-				bsql.lastJob.IsCookieInject = false
 			}
 		}
 	}
@@ -2016,7 +2019,7 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 		})
 	opt := make(map[string]interface{})
 	// //设置要修改cookie
-	opt["is_cookie_inject"] = true
+	opt["is_cookie_inject"] = false
 	variations, err = util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers, opt)
 	if err != nil {
 		return nil, false, err
@@ -2054,20 +2057,20 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 			return Result, true, nil
 		}
 	}
-	if BlindSQL.startTesting(true) {
-		Result := util.VulnerableTcpOrUdpResult(Param.Url,
-			"Cookie_inject inject Vulnerable",
-			[]string{},
-			[]string{},
-			"high",
-			Param.Hostid, string(plugin.Cookie_inject))
-		gd.Alert(Result)
-		return Result, true, nil
-	} else {
-		Result, isvuln, _ := TestBlindSQLInjection(&BlindSQL, &Param, gd)
-		if isvuln {
-			return Result, true, nil
-		}
-	}
+	// if BlindSQL.startTesting(true) {
+	// 	Result := util.VulnerableTcpOrUdpResult(Param.Url,
+	// 		"Cookie_inject inject Vulnerable",
+	// 		[]string{},
+	// 		[]string{},
+	// 		"high",
+	// 		Param.Hostid, string(plugin.Cookie_inject))
+	// 	gd.Alert(Result)
+	// 	return Result, true, nil
+	// } else {
+	// 	Result, isvuln, _ := TestBlindSQLInjection(&BlindSQL, &Param, gd)
+	// 	if isvuln {
+	// 		return Result, true, nil
+	// 	}
+	// }
 	return nil, false, err
 }

@@ -16,7 +16,7 @@ func TestSqlBlinddvwa(t *testing.T) {
 	logger.DebugEnable(true)
 
 	var PluginWg sync.WaitGroup
-	data, _ := config.ReadResultConf("./json_testfile/xss_test_zf.json")
+	data, _ := config.ReadResultConf("../json_testfile/sql_dvwa.json")
 	myfunc := []plugin.PluginCallback{}
 	myfunc = append(myfunc, sql.Sql_inject_Vaild)
 

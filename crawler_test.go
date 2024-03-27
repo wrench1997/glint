@@ -48,7 +48,7 @@ func Test_Crawler(t *testing.T) {
 	if err != nil {
 		t.Errorf("test ReadTaskConf() fail")
 	}
-	murl, _ := url.Parse("http://192.168.166.2/pikachu/")
+	murl, _ := url.Parse("http://192.168.166.2")
 	Headers := make(map[string]interface{})
 	//Headers["Cookie"] = "_ga=GA1.1.1124483291.1669624307; _gid=GA1.1.808795582.1672713209; JSESSIONID=20632F5E43D1443AF411906D81797D27; _ga_34B604LFFQ=GS1.1.1672818029.53.1.1672818075.14.0.0"
 	targets := &model.Request{

@@ -303,8 +303,14 @@ func (P *LastJob) RequestByIndex(idx int, originUrl string, paramValue []byte, o
 
 	if isCookieInject == "true" {
 		if strings.ToUpper(P.Layer.Method) == "POST" {
-			P.Layer.Headers["Cookie"] = originpayload
-			req, resp, err := P.Layer.Sess.Post(originUrl, P.Layer.Headers, P.Layer.Body)
+			Headers := make(map[string]string)
+			if P.Layer.Headers != nil {
+				for k, v := range P.Layer.Headers {
+					Headers[k] = v
+				}
+				Headers["Cookie"] = originpayload
+			}
+			req, resp, err := P.Layer.Sess.Post(originUrl, Headers, P.Layer.Body)
 			if err != nil {
 				logger.Debug("Plreq request error: %v", err)
 				return nil, err
@@ -318,8 +324,14 @@ func (P *LastJob) RequestByIndex(idx int, originUrl string, paramValue []byte, o
 			resp.CopyTo(&feature.Response)
 			P.Features = &feature
 		} else if strings.ToUpper(P.Layer.Method) == "GET" {
-			P.Layer.Headers["Cookie"] = originpayload
-			req, resp, err := P.Layer.Sess.Get(originUrl, P.Layer.Headers)
+			Headers := make(map[string]string)
+			if P.Layer.Headers != nil {
+				for k, v := range P.Layer.Headers {
+					Headers[k] = v
+				}
+				Headers["Cookie"] = originpayload
+			}
+			req, resp, err := P.Layer.Sess.Get(originUrl, Headers)
 			if err != nil {
 				logger.Debug("Plreq request error: %v", err)
 				return nil, err

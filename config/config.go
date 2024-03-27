@@ -327,7 +327,7 @@ func ReadYamlTaskConf(file string, TaskConfig *TaskYamlConfig) error {
 	}
 	// 要记得关闭
 	defer YamlFile.Close()
-	byteValue, _ := ioutil.ReadAll(YamlFile)
+	byteValue, _ := io.ReadAll(YamlFile)
 	// FileJsonUrls := make(map[string]interface{})
 	err = yaml.Unmarshal([]byte(byteValue), TaskConfig)
 	if err != nil {
