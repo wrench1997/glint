@@ -265,33 +265,57 @@ func (Dm *DbManager) SaveScanResult(
 	RespMsg string,
 	hostid int,
 ) (int64, error) {
-	sql := `
+
+	if Dm.MaskVul(taskid, plugin_id) {
+
+		sql := `
 	INSERT  
 	INTO 
 	exweb_task_result (task_id,is_vul,url,vul_id,request_info,host_id) 
 	VALUES(:taskid,:vul,:target,:vulid,:reqmsg,:hostid);
 	`
-	result, err := Dm.Db.NamedExec(sql, map[string]interface{}{
-		"taskid": taskid,
-		"vul":    Vulnerable,
-		"target": Target,
-		"vulid":  plugin_id,
-		"reqmsg": ReqMsg,
-		"hostid": hostid,
-		// "respmsg": RespMsg,
-		// "vulnerability": VulnerableLevel,
-	})
+		result, err := Dm.Db.NamedExec(sql, map[string]interface{}{
+			"taskid": taskid,
+			"vul":    Vulnerable,
+			"target": Target,
+			"vulid":  plugin_id,
+			"reqmsg": ReqMsg,
+			"hostid": hostid,
+			// "respmsg": RespMsg,
+			// "vulnerability": VulnerableLevel,
+		})
+
+		if err != nil {
+			logger.Error("NamedExec() save scan result error %v", err.Error())
+		}
+
+		result_id, err := result.LastInsertId()
+
+		if err != nil {
+			logger.Error("LastInsertId() save scan result error %v", err.Error())
+		}
+
+		return result_id, err
+	}
+	logger.Warning("MaskVul %s", plugin_id)
+	return -1, nil
+}
+
+func (Dm *DbManager) MaskVul(taskid int, vulid string) bool {
+	sql := ` SELECT count(*) from exweb_target_info eti,exweb_policy_vul epv where eti.policy_id = epv.policy_id and eti.task_id = ? and epv.vul_id = ?  `
+
+	values := []int{}
+
+	vulid = "'" + vulid + "'"
+
+	err := Dm.Db.Select(&values, sql, taskid, vulid)
 
 	if err != nil {
 		logger.Error("NamedExec() save scan result error %v", err.Error())
 	}
 
-	result_id, err := result.LastInsertId()
-
-	if err != nil {
-		logger.Error("LastInsertId() save scan result error %v", err.Error())
-	}
-	return result_id, err
+	b := values[0] != 0
+	return b
 }
 
 // 保存爬取到的链接
