@@ -306,8 +306,6 @@ func (Dm *DbManager) MaskVul(taskid int, vulid string) bool {
 
 	values := []int{}
 
-	vulid = "'" + vulid + "'"
-
 	err := Dm.Db.Select(&values, sql, taskid, vulid)
 
 	if err != nil {

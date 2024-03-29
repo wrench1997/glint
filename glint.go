@@ -744,14 +744,14 @@ func (t *Task) AddPlugins(
 		IsAllUrlsEval:    isAllUrlEval,
 	}
 
-	go func(args *plugin.PluginOption) {
-		pluginInternal.Run(*args)
+	go func(args plugin.PluginOption) {
+		pluginInternal.Run(args)
 		if pluginInternal.Pool.IsClosed() {
 			logger.Warning("插件【%s】的线程池已关闭.", pluginInternal.PluginName)
 		} else {
 			logger.Error("插件【%s】的线程池未关闭.", pluginInternal.PluginName)
 		}
-	}(&args)
+	}(args)
 }
 
 func (t *Task) CrawlerConvertToMap(

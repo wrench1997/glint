@@ -65,7 +65,9 @@ func (n *Node) Length() int {
 }
 
 func (n *Node) Clear() {
-	n.Children = n.Children[:0]
-	n.Key = 0
-	n.Value = NodeValue{}
+	if n.Length() != 0 {
+		n.Children = n.Children[:0]
+		n.Key = 0
+		n.Value = NodeValue{}
+	}
 }
