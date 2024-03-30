@@ -14,7 +14,7 @@ import (
 func Test_CSRF(t *testing.T) {
 
 	var PluginWg sync.WaitGroup
-	data, _ := config.ReadResultConf("../json_testfile/csrf_test.json")
+	data, _ := config.ReadResultConf("../json_testfile/fileinclude_dvwa.json")
 	myfunc := []plugin.PluginCallback{}
 	var TaskConfig config.TaskConfig
 	TaskYamlConfig := config.TaskYamlConfig{}

@@ -2020,7 +2020,7 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 		})
 	opt := make(map[string]interface{})
 	// //设置要修改cookie
-	opt["is_cookie_inject"] = false
+	opt["is_cookie_inject"] = true
 	variations, err = util.ParseUri(Param.Url, []byte(Param.Body), Param.Method, Param.ContentType, Param.Headers, opt)
 	if err != nil {
 		return nil, false, err
@@ -2058,20 +2058,20 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 			return Result, true, nil
 		}
 	}
-	// if BlindSQL.startTesting(true) {
-	// 	Result := util.VulnerableTcpOrUdpResult(Param.Url,
-	// 		"Cookie_inject inject Vulnerable",
-	// 		[]string{},
-	// 		[]string{},
-	// 		"high",
-	// 		Param.Hostid, string(plugin.Cookie_inject))
-	// 	gd.Alert(Result)
-	// 	return Result, true, nil
-	// } else {
-	// 	Result, isvuln, _ := TestBlindSQLInjection(&BlindSQL, &Param, gd)
-	// 	if isvuln {
-	// 		return Result, true, nil
-	// 	}
-	// }
+	if BlindSQL.startTesting(true) {
+		Result := util.VulnerableTcpOrUdpResult(Param.Url,
+			"Cookie_inject inject Vulnerable",
+			[]string{},
+			[]string{},
+			"high",
+			Param.Hostid, string(plugin.Cookie_inject))
+		gd.Alert(Result)
+		return Result, true, nil
+	} else {
+		Result, isvuln, _ := TestBlindSQLInjection(&BlindSQL, &Param, gd)
+		if isvuln {
+			return Result, true, nil
+		}
+	}
 	return nil, false, err
 }
