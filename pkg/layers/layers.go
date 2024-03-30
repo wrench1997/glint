@@ -389,6 +389,7 @@ func (P *LastJob) RequestByIndex(idx int, originUrl string, paramValue []byte, o
 func CompareFeatures(src []*MFeatures, dst []*MFeatures) bool {
 	parse1 := ast.Parser{}
 	parse2 := ast.Parser{}
+
 	defer parse1.Clear()
 	defer parse2.Clear()
 	var isEquivalent bool

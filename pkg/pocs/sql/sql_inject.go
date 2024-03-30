@@ -2008,6 +2008,7 @@ func Sql_inject_Vaild(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 	}
 	BlindSQL.Rate = Param.Rate
 
+	// logger.Error("SQL URL:%s", Param.Url)
 	sess := nenet.GetSessionByOptions(
 		&nenet.ReqOptions{
 			Timeout:       time.Duration(Param.Timeout) * time.Second,
