@@ -69,7 +69,6 @@ func Csrfeval(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 			Cert:          Param.Cert,
 			PrivateKey:    Param.CertKey,
 		})
-
 	var ContentType string = "None"
 	if value, ok := Param.Headers["Content-Type"]; ok {
 		Param.ContentType = value
@@ -81,29 +80,32 @@ func Csrfeval(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 			logger.Debug(err.Error())
 			return nil, false, fmt.Errorf(err.Error())
 		}
+		var mf1 layers.MFeatures
+		var mf2 layers.MFeatures
+		defer mf1.Clear()
+		defer mf2.Clear()
 		if params.Len() == 0 {
 			return nil, false, fmt.Errorf("post the url have no params")
 		}
-
-		_, resp1, errs := sess.Post(Param.Url, Param.Headers, []byte(Param.Body))
+		req1, resp1, errs := sess.Post(Param.Url, Param.Headers, []byte(Param.Body))
 		if errs != nil {
 			return nil, false, errs
 		}
-		b1 := resp1.Body()
-		if resp1.StatusCode() != 200 {
-			errstr := fmt.Sprintf("Fake Origin Response Fail. Status code: %d", resp1.StatusCode())
-			return nil, false, errors.New(errstr)
-		}
+		req1.CopyTo(&mf1.Request)
+		resp1.CopyTo(&mf1.Response)
 		Param.Headers["Origin"] = ORIGIN_URL
-
 		req2, resp2, errs := sess.Post(Param.Url, Param.Headers, []byte(Param.Body))
-		b2 := resp2.Body()
-		if len(b1) == len(b2) {
+		if errs != nil {
+			return nil, false, errs
+		}
+		req1.CopyTo(&mf2.Request)
+		resp1.CopyTo(&mf2.Response)
+		if layers.CompareFeatures([]*layers.MFeatures{&mf1}, []*layers.MFeatures{&mf2}) {
 			//fmt.Println(aurora.Red("Heuristics reveal endpoint might be VULNERABLE to Origin Base CSRFs..."))
 			Result := util.VulnerableTcpOrUdpResult(Param.Url,
 				"csrf Origin Vulnerable",
 				[]string{string(req2.String())},
-				[]string{string(b2)},
+				[]string{string("")},
 				"middle",
 				Param.Hostid, string(plugin.Csrf))
 			group.Alert(Result)
@@ -118,25 +120,31 @@ func Csrfeval(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 		default:
 		}
 
-		_, resp1, errs = sess.Post(Param.Url, Param.Headers, []byte(Param.Body))
+		var mf3 layers.MFeatures
+		var mf4 layers.MFeatures
+		defer mf3.Clear()
+		defer mf4.Clear()
+		req1, resp1, errs = sess.Post(Param.Url, Param.Headers, []byte(Param.Body))
 		if errs != nil {
 			return nil, false, errs
 		}
-		b1 = resp1.Body()
 		if resp1.StatusCode() != 200 {
 			errstr := fmt.Sprintf("Fake Origin Referer Fail. Status code: %d", resp1.StatusCode())
 			return nil, false, errors.New(errstr)
 		}
+		req1.CopyTo(&mf3.Request)
+		resp1.CopyTo(&mf3.Response)
 		Param.Headers["Referer"] = REFERER_URL
-
 		req2, resp2, errs = sess.Post(Param.Url, Param.Headers, []byte(Param.Body))
-		b2 = resp2.Body()
-		if len(b1) == len(b2) {
+		req2.CopyTo(&mf4.Request)
+		resp2.CopyTo(&mf4.Response)
+
+		if layers.CompareFeatures([]*layers.MFeatures{&mf3}, []*layers.MFeatures{&mf4}) {
 			logger.Debug("Heuristics reveal endpoint might be VULNERABLE to Referer CSRFs...")
 			Result := util.VulnerableTcpOrUdpResult(Param.Url,
 				"Heuristics reveal endpoint might be VULNERABLE to Referer CSRFs...",
 				[]string{string(req2.String())},
-				[]string{string(b2)},
+				[]string{string("")},
 				"middle",
 				Param.Hostid, string(plugin.Csrf))
 			group.Alert(Result)
@@ -144,12 +152,82 @@ func Csrfeval(args *plugin.GroupData) (*util.ScanResult, bool, error) {
 		}
 		return nil, false, errs
 
+	} else {
+		params, err := util.ParseUri(Param.Url, []byte(Param.Body), "GET", ContentType, Param.Headers, nil)
+		if err != nil {
+			logger.Debug(err.Error())
+			return nil, false, fmt.Errorf(err.Error())
+		}
+		var mf1 layers.MFeatures
+		var mf2 layers.MFeatures
+		defer mf1.Clear()
+		defer mf2.Clear()
+		if params.Len() == 0 {
+			return nil, false, fmt.Errorf("post the url have no params")
+		}
+		req1, resp1, errs := sess.Get(Param.Url, Param.Headers)
+		if errs != nil {
+			return nil, false, errs
+		}
+		req1.CopyTo(&mf1.Request)
+		resp1.CopyTo(&mf1.Response)
+		Param.Headers["Origin"] = ORIGIN_URL
+		req2, resp2, errs := sess.Get(Param.Url, Param.Headers)
+		if errs != nil {
+			return nil, false, errs
+		}
+		req1.CopyTo(&mf2.Request)
+		resp1.CopyTo(&mf2.Response)
+		if layers.CompareFeatures([]*layers.MFeatures{&mf1}, []*layers.MFeatures{&mf2}) {
+			//fmt.Println(aurora.Red("Heuristics reveal endpoint might be VULNERABLE to Origin Base CSRFs..."))
+			Result := util.VulnerableTcpOrUdpResult(Param.Url,
+				"csrf Origin Vulnerable",
+				[]string{string(req2.String())},
+				[]string{string("")},
+				"middle",
+				Param.Hostid, string(plugin.Csrf))
+			group.Alert(Result)
+			return Result, true, errs
+		}
+
+		REFERER_URL := `http://192.168.166.8/vulnerabilities/csrf`
+		ctx := *group.Pctx
+		select {
+		case <-ctx.Done():
+			return nil, false, ctx.Err()
+		default:
+		}
+
+		var mf3 layers.MFeatures
+		var mf4 layers.MFeatures
+		defer mf3.Clear()
+		defer mf4.Clear()
+		req1, resp1, errs = sess.Get(Param.Url, Param.Headers)
+		if errs != nil {
+			return nil, false, errs
+		}
+		if resp1.StatusCode() != 200 {
+			errstr := fmt.Sprintf("Fake Origin Referer Fail. Status code: %d", resp1.StatusCode())
+			return nil, false, errors.New(errstr)
+		}
+		req1.CopyTo(&mf3.Request)
+		resp1.CopyTo(&mf3.Response)
+		Param.Headers["Referer"] = REFERER_URL
+		req2, resp2, errs = sess.Get(Param.Url, Param.Headers)
+		req2.CopyTo(&mf4.Request)
+		resp2.CopyTo(&mf4.Response)
+
+		if layers.CompareFeatures([]*layers.MFeatures{&mf3}, []*layers.MFeatures{&mf4}) {
+			logger.Debug("Heuristics reveal endpoint might be VULNERABLE to Referer CSRFs...")
+			Result := util.VulnerableTcpOrUdpResult(Param.Url,
+				"Heuristics reveal endpoint might be VULNERABLE to Referer CSRFs...",
+				[]string{string(req2.String())},
+				[]string{string("")},
+				"middle",
+				Param.Hostid, string(plugin.Csrf))
+			group.Alert(Result)
+			return Result, true, errs
+		}
+		return nil, false, errs
 	}
-
-	return nil, false, errors.New("these is get method or params errors")
 }
-
-// func Referer(args *plugin.GroupData) (*util.ScanResult, error) {
-
-// 	return nil, errors.New("these is get method or params errors")
-// }

@@ -14,8 +14,17 @@ import (
 func Test_CSRF(t *testing.T) {
 
 	var PluginWg sync.WaitGroup
-	data, _ := config.ReadResultConf("result.json")
+	data, _ := config.ReadResultConf("../json_testfile/csrf_test.json")
 	myfunc := []plugin.PluginCallback{}
+	var TaskConfig config.TaskConfig
+	TaskYamlConfig := config.TaskYamlConfig{}
+	TaskYamlConfig.Proxy = "127.0.0.1:7777"
+	TaskYamlConfig.NoHeadless = true
+	TaskYamlConfig.TabRunTimeout = 20 * time.Minute
+	TaskYamlConfig.ScanDepth = 4
+	TaskConfig.Yaml = TaskYamlConfig
+	TaskConfig.JsonOrYaml = true
+
 	myfunc = append(myfunc, csrf.Csrfeval)
 	pluginInternal := plugin.Plugin{
 		PluginName:   "Csrf",
@@ -36,6 +45,7 @@ func Test_CSRF(t *testing.T) {
 		Data:     data,
 		TaskId:   999,
 		Rate:     &Ratelimite,
+		Config:   TaskConfig,
 		// Sendstatus: &pluginInternal.PliuginsMsg,
 	}
 

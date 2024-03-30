@@ -126,12 +126,13 @@ func (p *PluginParam) ParsePluginParams(group *plugin.GroupData, ct CheckType) {
 		o := RMaxRedirectTimes.Int()
 		p.MaxRedirectTimes = o
 	} else {
-
 		o, err := strconv.Atoi(RMaxRedirectTimes.String())
 		if err != nil {
 			logger.Error("error RMaxRedirectTimes %s", err.Error())
+			p.MaxRedirectTimes = 5
+		} else {
+			p.MaxRedirectTimes = int64(o)
 		}
-		p.MaxRedirectTimes = int64(o)
 	}
 
 	//RMRDTT, err := strconv.Atoi(RMRDTS)

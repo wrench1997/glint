@@ -1,7 +1,7 @@
 {
     "SubmitDoM-n6OAH": [
         {
-            "url": "http: //192.168.166.2/pikachu/vul/csrf/csrfpost/csrf_post_login.php?username=Wrench1997&password=Liujialin1997&submit=Login",
+            "url": "http://192.168.166.2/pikachu/vul/csrf/csrfpost/csrf_post_login.php?username=Wrench1997&password=Liujialin1997&submit=Login",
             "method": "GET",
             "headers": {
                 "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
