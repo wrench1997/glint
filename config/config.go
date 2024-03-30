@@ -28,7 +28,7 @@ const (
 	EventTriggerInterval    = 100 * time.Millisecond // 单位毫秒
 	BeforeExitDelay         = 1 * time.Second
 	DefaultEventTriggerMode = EventTriggerAsync
-	MaxCrawlCount           = 100
+	MaxCrawlCount           = 200
 )
 
 // 请求方法

@@ -1,4 +1,4 @@
-MaxCrawlCount: 100
+MaxCrawlCount: 200
 
 DBUser: "newitop"
 DBName: "itop"

@@ -266,7 +266,11 @@ func (Dm *DbManager) SaveScanResult(
 	hostid int,
 ) (int64, error) {
 
-	if Dm.MaskVul(taskid, plugin_id) {
+	ok, err := Dm.MaskVul(taskid, plugin_id)
+	if err != nil {
+		return -1, err
+	}
+	if ok {
 
 		sql := `
 	INSERT  
@@ -301,7 +305,7 @@ func (Dm *DbManager) SaveScanResult(
 	return -1, nil
 }
 
-func (Dm *DbManager) MaskVul(taskid int, vulid string) bool {
+func (Dm *DbManager) MaskVul(taskid int, vulid string) (bool, error) {
 	sql := ` SELECT count(*) from exweb_target_info eti,exweb_policy_vul epv where eti.policy_id = epv.policy_id and eti.task_id = ? and epv.vul_id = ?  `
 
 	values := []int{}
@@ -313,7 +317,7 @@ func (Dm *DbManager) MaskVul(taskid int, vulid string) bool {
 	}
 
 	b := values[0] != 0
-	return b
+	return b, err
 }
 
 // 保存爬取到的链接
