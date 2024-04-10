@@ -376,6 +376,9 @@ func (tab *Tab) ListenTarget(extends interface{}) {
 		case *fetch.EventRequestPaused:
 			go func(ctx context.Context, ev *fetch.EventRequestPaused) {
 				var a chromedp.Action
+				if _, ok := ev.Request.Headers["Cookie"]; ok {
+					println(ev.Request.Headers["Cookie"])
+				}
 				Domain1 := tab.NavigateReq.URL.String() + "/"
 				rule1 := strings.Replace(tab.NavigateReq.URL.String(), "http://", "https://", -1)
 				rule2 := strings.Replace(tab.NavigateReq.URL.String(), "https://", "http://", -1)
@@ -398,8 +401,6 @@ func (tab *Tab) ListenTarget(extends interface{}) {
 					} else if util.GetScanDeepByUrl(ev.Request.URL) > int(tab.Scandeep) {
 						logger.Debug("AJAX request add Url forbiden because ScanDeep limit")
 						a = fetch.FailRequest(ev.RequestID, network.ErrorReasonAborted)
-
-						// a = fetch.ContinueRequest(ev.RequestID)
 					} else {
 						a = fetch.ContinueRequest(ev.RequestID)
 					}
@@ -531,13 +532,16 @@ func (tab *Tab) ListenTarget(extends interface{}) {
 			if ev.Request.HasPostData {
 				logger.Success("EventRequestWillBeSent Post %s", ev.Request.PostData)
 			}
+
 		case *page.EventDomContentEventFired:
+
 			if DOMContentLoadedRun {
 				return
 			}
 			DOMContentLoadedRun = true
 			tab.WG.Add(1)
 			go tab.AfterDOMRun()
+
 		case *page.EventLoadEventFired:
 			if DOMContentLoadedRun {
 				return
@@ -951,7 +955,7 @@ func (tab *Tab) fillForm() error {
 		if !(node.AttributeValue("type") == "hidden" || node.AttributeValue("display") == "none") {
 			//填写用户名
 			if funk.Contains([]string{"user", "用户名", "username", "user_name"}, node.AttributeValue("name")) {
-				err = chromedp.SendKeys(fmt.Sprintf(`%s[name=%s]`, node.LocalName, node.AttributeValue("name")), "Wrench1997").Do(subctx)
+				err = chromedp.SendKeys(fmt.Sprintf(`%s[name=%s]`, node.LocalName, node.AttributeValue("name")), "admin").Do(subctx)
 				if err != nil {
 					fmt.Println(aurora.Sprintf("SendKeys username error: %s", err.Error()))
 					return err
@@ -960,7 +964,7 @@ func (tab *Tab) fillForm() error {
 			}
 			//填写密码
 			if funk.Contains([]string{"pwd", "密码", "pass", "password", "user_password", "user_pass", "user_pwd"}, node.AttributeValue("name")) {
-				err = chromedp.SendKeys(fmt.Sprintf(`%s[name=%s]`, node.LocalName, node.AttributeValue("name")), "Liujialin1997").Do(subctx)
+				err = chromedp.SendKeys(fmt.Sprintf(`%s[name=%s]`, node.LocalName, node.AttributeValue("name")), "admin").Do(subctx)
 				if err != nil {
 					fmt.Println(aurora.Sprintf("SendKeys password error: %s", err.Error()))
 					return err
@@ -968,7 +972,7 @@ func (tab *Tab) fillForm() error {
 				continue
 			}
 			//填写其他
-			err = chromedp.SendKeys(fmt.Sprintf(`%s[name=%s]`, node.LocalName, node.AttributeValue("name")), "test1234").Do(subctx)
+			err = chromedp.SendKeys(fmt.Sprintf(`%s[name=%s]`, node.LocalName, node.AttributeValue("name")), "admin").Do(subctx)
 			if err != nil {
 				fmt.Println(aurora.Sprintf("SendKeys %s %s", node.LocalName, err.Error()))
 				return err

@@ -7,6 +7,7 @@ import (
 	"errors"
 	"fmt"
 	"glint/util"
+
 	"net/url"
 	"strings"
 )
@@ -40,6 +41,7 @@ type Request struct {
 	FasthttpProxy   string
 	GroupsId        string //针对爬虫的时候触发某个js事件因此触发其他Url请求，使用此ID作为同一群组的标识符
 	PageState       util.PageState
+	Flags           int // 0 发现未扫描 1 发现已扫描 2 已扫描
 }
 
 var supportContentType = []string{"application/json", "application/x-www-form-urlencoded"}

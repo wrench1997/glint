@@ -242,3 +242,24 @@ func (u *URL) ParentPath() string {
 		return strings.Join(parts, "/")
 	}
 }
+
+// // 定义过滤器类型
+// type Filter func(*http.Request) bool
+
+// 创建过滤器函数
+func Remove_duplicates_url(url string, crawledURLs []*Request) bool {
+	// // 获取请求的 URL
+	// url := r.URL.String()
+
+	// 检查 URL 是否在已爬取的网站列表中
+	for _, crawledURL := range crawledURLs {
+		if strings.Contains(url, crawledURL.URL.String()) {
+			if crawledURL.Flags == 2 {
+				return false
+			} else {
+				return true
+			}
+		}
+	}
+	return true
+}

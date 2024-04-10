@@ -259,29 +259,40 @@ func (t *tabTask) Task() {
 		logger.Debug("Filter Request:%s", req.URL.String())
 		if t.crawlerTask.Config.FilterMode == SimpleFilterMode {
 			if !t.crawlerTask.smartFilter.SimpleFilter.DoFilter(req) {
-				//t.crawlerTask.Result.resultLock.Lock()
-				t.crawlerTask.Result.ReqList = append(t.crawlerTask.Result.ReqList, req)
-				//t.crawlerTask.Result.resultLock.Unlock()
 				if !FilterKey(req.URL.String(), t.crawlerTask.Config.IgnoreKeywords) {
-					t.crawlerTask.addTask2Pool(req)
-					//这里通知进度条
-					if t.IsSocket {
-						util.SendToSocket(t.SocketMsg, craw_flag, "crawler", req.URL.String())
+					if tab.NavigateReq.URL.String() == req.URL.String() {
+						req.Flags = 2 //set has finished
+					}
+					if model.Remove_duplicates_url(req.URL.String(), t.crawlerTask.Result.ReqList) {
+						t.crawlerTask.addTask2Pool(req)
+						req.Flags = 1 //set has started progress
+						t.crawlerTask.Result.ReqList = append(t.crawlerTask.Result.ReqList, req)
+						//这里通知进度条
+						if t.IsSocket {
+							util.SendToSocket(t.SocketMsg, craw_flag, "crawler", req.URL.String())
+						}
 					}
 				}
 			}
 		} else {
+
+			//添加正在扫描的网站
 			if !t.crawlerTask.smartFilter.DoFilter(req) {
-				//t.crawlerTask.Result.resultLock.Lock()
-				t.crawlerTask.Result.ReqList = append(t.crawlerTask.Result.ReqList, req)
-				//t.crawlerTask.Result.resultLock.Unlock()
-				if !FilterKey(req.URL.String(), t.crawlerTask.Config.IgnoreKeywords) {
-					t.crawlerTask.addTask2Pool(req)
-					//这里通知进度条
-					if t.IsSocket {
-						util.SendToSocket(t.SocketMsg, craw_flag, "crawler", req.URL.String())
+
+				if model.Remove_duplicates_url(req.URL.String(), t.crawlerTask.Result.ReqList) {
+					t.crawlerTask.Result.ReqList = append(t.crawlerTask.Result.ReqList, req)
+					//t.crawlerTask.Result.resultLock.Unlock()
+					if !FilterKey(req.URL.String(), t.crawlerTask.Config.IgnoreKeywords) {
+						t.crawlerTask.addTask2Pool(req)
+						//这里通知进度条
+						if t.IsSocket {
+							util.SendToSocket(t.SocketMsg, craw_flag, "crawler", req.URL.String())
+						}
 					}
 				}
+
+				//t.crawlerTask.Result.resultLock.Lock()
+
 			}
 		}
 	}

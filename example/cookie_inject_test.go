@@ -15,7 +15,7 @@ import (
 func Test_cookieSqlBlinddvwa(t *testing.T) {
 	logger.DebugEnable(true)
 	var PluginWg sync.WaitGroup
-	data, _ := config.ReadResultConf("../json_testfile/cookie_inject.json")
+	data, _ := config.ReadResultConf("../json_testfile/craw_test.json")
 	myfunc := []plugin.PluginCallback{}
 	myfunc = append(myfunc, sql.Sql_inject_Vaild)
 
