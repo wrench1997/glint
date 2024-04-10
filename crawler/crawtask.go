@@ -278,12 +278,15 @@ func (t *tabTask) Task() {
 
 			//添加正在扫描的网站
 			if !t.crawlerTask.smartFilter.DoFilter(req) {
-
+				if tab.NavigateReq.URL.String() == req.URL.String() {
+					req.Flags = 2 //set has finished
+				}
 				if model.Remove_duplicates_url(req.URL.String(), t.crawlerTask.Result.ReqList) {
 					t.crawlerTask.Result.ReqList = append(t.crawlerTask.Result.ReqList, req)
 					//t.crawlerTask.Result.resultLock.Unlock()
 					if !FilterKey(req.URL.String(), t.crawlerTask.Config.IgnoreKeywords) {
 						t.crawlerTask.addTask2Pool(req)
+						req.Flags = 1 //set has started progress
 						//这里通知进度条
 						if t.IsSocket {
 							util.SendToSocket(t.SocketMsg, craw_flag, "crawler", req.URL.String())
