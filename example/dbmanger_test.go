@@ -163,3 +163,18 @@ func Test_GetExtraHeaders(t *testing.T) {
 	logger.Info("%v", headers)
 
 }
+
+func Test_Install_VULN(t *testing.T) {
+	var err error
+	Dm := dbmanager.DbManager{}
+	err = Dm.Init()
+	if err != nil {
+		t.Error(err)
+	}
+	headers, err := Dm.GetExtraHeaders(6, 5)
+	if err != nil {
+		t.Error(err)
+	}
+	logger.Info("%v", headers)
+
+}

@@ -323,7 +323,7 @@ func (p *Plugin) Run(args PluginOption) error {
 						Resp = vuln.RespMsg[0]
 					}
 
-					if p != nil && vuln != nil {
+					if vuln != nil {
 						Result_id, err = p.Dm.SaveScanResult(
 							p.Taskid,
 							PluginId,

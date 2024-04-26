@@ -266,43 +266,43 @@ func (Dm *DbManager) SaveScanResult(
 	hostid int,
 ) (int64, error) {
 
-	ok, err := Dm.MaskVul(taskid, plugin_id)
-	if err != nil {
-		return -1, err
-	}
-	if ok {
+	// ok, err := Dm.MaskVul(taskid, plugin_id)
+	// if err != nil {
+	// 	return -1, err
+	// }
+	// if ok {
 
-		sql := `
+	sql := `
 	INSERT  
 	INTO 
 	exweb_task_result (task_id,is_vul,url,vul_id,request_info,host_id) 
 	VALUES(:taskid,:vul,:target,:vulid,:reqmsg,:hostid);
 	`
-		result, err := Dm.Db.NamedExec(sql, map[string]interface{}{
-			"taskid": taskid,
-			"vul":    Vulnerable,
-			"target": Target,
-			"vulid":  plugin_id,
-			"reqmsg": ReqMsg,
-			"hostid": hostid,
-			// "respmsg": RespMsg,
-			// "vulnerability": VulnerableLevel,
-		})
+	result, err := Dm.Db.NamedExec(sql, map[string]interface{}{
+		"taskid": taskid,
+		"vul":    Vulnerable,
+		"target": Target,
+		"vulid":  plugin_id,
+		"reqmsg": ReqMsg,
+		"hostid": hostid,
+		// "respmsg": RespMsg,
+		// "vulnerability": VulnerableLevel,
+	})
 
-		if err != nil {
-			logger.Error("NamedExec() save scan result error %v", err.Error())
-		}
-
-		result_id, err := result.LastInsertId()
-
-		if err != nil {
-			logger.Error("LastInsertId() save scan result error %v", err.Error())
-		}
-
-		return result_id, err
+	if err != nil {
+		logger.Error("NamedExec() save scan result error %v", err.Error())
 	}
-	logger.Warning("MaskVul %s", plugin_id)
-	return -1, nil
+
+	result_id, err := result.LastInsertId()
+
+	if err != nil {
+		logger.Error("LastInsertId() save scan result error %v", err.Error())
+	}
+
+	return result_id, err
+	//}
+	//logger.Warning("MaskVul %s", plugin_id)
+	//return -1, nil
 }
 
 func (Dm *DbManager) MaskVul(taskid int, vulid string) (bool, error) {
